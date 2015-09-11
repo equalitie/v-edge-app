@@ -1,0 +1,32 @@
+{% extends "dashboard.html" %}
+
+    {% block content_header %}
+
+            <h2 class="server_url_title">
+                {{ _("Ip address") }}
+            </h2>
+
+    {% endblock %}
+
+    {% block server_section %}
+
+            <form method="POST" class="" role="form">
+
+            {{ form.ip_address(class_="form-control new_server_input", placeholder=form.ip_address.description.placeholder|safe) }}
+
+             {% if form.ip_address.errors %}
+
+                <div class="new_server_errors">
+                    {% for e in form.ip_address.errors %}
+                        {{ e }}
+                    {% endfor %}
+                </div>
+
+            {% endif %}
+           <button class="btn btn-success" type="submit">{{ _("Save IP") }}</button>
+
+        </form>
+
+        {% include "setup/include/help_footer.html" %}
+
+    {% endblock %}

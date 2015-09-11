@@ -1,0 +1,860 @@
+# Translations template for PROJECT.
+# Copyright (C) 2014 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# 
+# Translators:
+# U <uff.hitech@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Deflect\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2014-11-26 23:13-0500\n"
+"PO-Revision-Date: 2015-07-30 13:54+0000\n"
+"Last-Translator: U <uff.hitech@gmail.com>\n"
+"Language-Team: Russian (Russia) (http://www.transifex.com/equalitie/deflect/language/ru_RU/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../config/default.py:43
+msgid "DNS zone file configuration issues"
+msgstr "Проблемы, связанные с конфигурированием файла DNS зоны"
+
+#: ../../config/default.py:44
+msgid "General support"
+msgstr "Поддержка (общие темы)"
+
+#: ../../config/default.py:45
+msgid "Incident report"
+msgstr "Сообщить об инциденте"
+
+#: ../../frontend/forms/incident.py:10
+msgid "Choose website *"
+msgstr "Выберите веб-сайт *"
+
+#: ../../frontend/forms/incident.py:12
+msgid "Incident date and time *"
+msgstr "Дата и время инцидента *"
+
+#: ../../frontend/forms/incident.py:17
+msgid "Problem description *"
+msgstr "Описание проблемы *"
+
+#: ../../frontend/forms/incident.py:18
+msgid "What were you doing? Where did you come from?"
+msgstr "Что мы делаем? Откуда мы пришли?"
+
+#: ../../frontend/forms/incident.py:22
+msgid "Contact email"
+msgstr "Адрес email"
+
+#: ../../frontend/forms/incident.py:27
+msgid "This field is optional."
+msgstr "Это необязательное поле."
+
+#: ../../frontend/forms/incident.py:28
+msgid "How to find the via header."
+msgstr "Где найти заголовок via."
+
+#: ../../frontend/forms/incident.py:31
+msgid "Via header"
+msgstr "Заголвок Via"
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:19
+msgid "Name"
+msgstr "Имя"
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:22
+#: ../../frontend/templates/setup/include/dns_records_edit.html:43
+msgid "Value"
+msgstr "Значение"
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:28
+#: ../../frontend/templates/setup/include/dns_records_edit.html:31
+msgid "Use Deflect"
+msgstr "Использовать Deflect"
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:28
+msgid "Don't use Deflect"
+msgstr "Не использовать Deflect"
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:36
+msgid "Incorrect ttl value."
+msgstr "Неверное значение ttl"
+
+#: ../../frontend/forms/new_user.py:16
+msgid "Enter email"
+msgstr "Введите email"
+
+#: ../../frontend/forms/new_user.py:19
+msgid "Administrator"
+msgstr "Администратор"
+
+#: ../../frontend/forms/new_user.py:19
+msgid "Collaborator"
+msgstr "Сотрудник"
+
+#: ../../frontend/forms/new_website.py:14
+#: ../../frontend/forms/new_website.py:15
+msgid "Website URL"
+msgstr "URL адрес сайта"
+
+#: ../../frontend/forms/new_website.py:19
+#: ../../frontend/forms/website_settings.py:15
+msgid "IP address *"
+msgstr "IP адрес *"
+
+#: ../../frontend/forms/new_website.py:20
+msgid "IP address: 129.128.127.126"
+msgstr "IP адрес: 129.128.127.126"
+
+#: ../../frontend/forms/security_settings.py:14
+msgid "Authentication password"
+msgstr "Пароль аутентификации"
+
+#: ../../frontend/forms/security_settings.py:16
+msgid "New authentication password"
+msgstr "Новый пароль аутентификации"
+
+#: ../../frontend/forms/security_ssl.py:15
+msgid "My website uses SSL"
+msgstr "Мой веб-сайт использует SSL"
+
+#: ../../frontend/forms/security_ssl.py:16
+#: ../../frontend/templates/setup/include/ssl_uploads.html:24
+msgid "Certificate file"
+msgstr "Файл с сертификатом"
+
+#: ../../frontend/forms/security_ssl.py:17
+#: ../../frontend/templates/setup/include/ssl_uploads.html:32
+msgid "Key file"
+msgstr "Файл с ключом"
+
+#: ../../frontend/forms/security_ssl.py:18
+#: ../../frontend/templates/setup/include/ssl_uploads.html:40
+msgid "Chain file"
+msgstr "Файл с цепочкой"
+
+#: ../../frontend/forms/security_ssl.py:29
+msgid "Certificate file and key file needed."
+msgstr "Необходимо указать файлы ключа и сертификата."
+
+#: ../../frontend/forms/security_ssl.py:35
+msgid "Certificate file must have a .crt extension."
+msgstr "Сертификат должен иметь расширение .crt"
+
+#: ../../frontend/forms/security_ssl.py:41
+msgid "Key file must have a .key extension."
+msgstr "Ключ должен иметь расширение .key"
+
+#: ../../frontend/forms/security_ssl.py:48
+msgid "Chain file must have a .crt extension."
+msgstr "Цепочка должна иметь расширение .crt"
+
+#: ../../frontend/forms/settings.py:11
+msgid "New email"
+msgstr "Новый email"
+
+#: ../../frontend/forms/settings.py:28
+msgid "New passwords must match"
+msgstr "Новые пароли должны совпадать"
+
+#: ../../frontend/forms/settings.py:33
+msgid "Old password does not match."
+msgstr "Старый пароль не соотвествует."
+
+#: ../../frontend/forms/signup_login.py:19
+msgid "email"
+msgstr "email"
+
+#: ../../frontend/forms/signup_login.py:24
+msgid "password"
+msgstr "пароль"
+
+#: ../../frontend/forms/signup_login.py:32
+#: ../../frontend/forms/signup_login.py:40
+msgid "Invalid password"
+msgstr "Неверный пароль"
+
+#: ../../frontend/forms/signup_login.py:48
+msgid "Invalid user"
+msgstr "Неправильное имя пользователя"
+
+#: ../../frontend/forms/signup_login.py:59
+msgid "Domain name *"
+msgstr "Доменное имя *"
+
+#: ../../frontend/forms/signup_login.py:60
+msgid "http://www.example.com"
+msgstr "http://www.example.com"
+
+#: ../../frontend/forms/signup_login.py:64
+msgid "IP Address *"
+msgstr "IP Адрес *"
+
+#: ../../frontend/forms/signup_login.py:69
+#: ../../frontend/forms/signup_login.py:93
+msgid "Email *"
+msgstr "Email *"
+
+#: ../../frontend/forms/signup_login.py:73
+msgid "I use PGP"
+msgstr "Я использую PGP"
+
+#: ../../frontend/forms/signup_login.py:75
+#: ../../frontend/forms/signup_login.py:76
+msgid "PGP Key"
+msgstr "Ключ PGP"
+
+#: ../../frontend/forms/signup_login.py:85
+msgid "You are not allowed to sign up for this website."
+msgstr "У вас нет прав, чтобы подписаться на этот сайт."
+
+#: ../../frontend/forms/signup_login.py:104
+msgid "Password"
+msgstr "Пароль"
+
+#: ../../frontend/forms/signup_login.py:107
+#: ../../frontend/templates/settings.html:54
+msgid "New password"
+msgstr "Новый пароль"
+
+#: ../../frontend/forms/signup_login.py:113
+#: ../../frontend/templates/settings.html:57
+msgid "New password (repeat)"
+msgstr "Новый пароль (повторите)"
+
+#: ../../frontend/forms/signup_login.py:118
+msgid "Passwords do not match"
+msgstr "Пароли не совпадают"
+
+#: ../../frontend/forms/support.py:10 ../../frontend/templates/support.html:45
+msgid "Comment"
+msgstr "Комментарий"
+
+#: ../../frontend/forms/website_settings.py:20
+msgid "Collect visitor logs"
+msgstr "Собирать логи посетитетей"
+
+#: ../../frontend/templates/changepassword.html:3
+msgid "Forgot your password"
+msgstr "Забыли свой пароль"
+
+#: ../../frontend/templates/changepassword.html:9
+#: ../../frontend/templates/forgotpassword.html:3
+#: ../../frontend/templates/forgotpassword.html:9
+msgid "Forgot your password?"
+msgstr "Забыли свой пароль?"
+
+#: ../../frontend/templates/changepassword.html:19
+msgid "Your password was successfully saved!"
+msgstr "Ваш пароль успешно сохранён!"
+
+#: ../../frontend/templates/changepassword.html:19
+msgid "Back to login"
+msgstr "Назад к странице входа"
+
+#: ../../frontend/templates/changepassword.html:23
+msgid "Please enter your new password."
+msgstr "Пожалуйста, введите ваш новый пароль."
+
+#: ../../frontend/templates/changepassword.html:54
+msgid "Change password"
+msgstr "Изменить пароль"
+
+#: ../../frontend/templates/dashboard.html:14
+msgid "Deflected websites"
+msgstr "Веб-сайты, защищённые Deflect"
+
+#: ../../frontend/templates/dashboard.html:21
+msgid "You have no websites yet."
+msgstr "У Вас пока нет сайтов."
+
+#: ../../frontend/templates/dashboard.html:27
+msgid "Add a new website"
+msgstr "Добавить новый веб-сайт"
+
+#: ../../frontend/templates/dashboard.html:31
+msgid "My account"
+msgstr "Моя учётная запись"
+
+#: ../../frontend/templates/dashboard.html:33
+#: ../../frontend/templates/settings.html:5
+msgid "Settings"
+msgstr "Настройки"
+
+#: ../../frontend/templates/dashboard.html:34
+msgid "Logout"
+msgstr "Выйти"
+
+#: ../../frontend/templates/dashboard.html:37
+msgid "Language"
+msgstr "Язык"
+
+#: ../../frontend/templates/dashboard.html:40
+msgid "Choose language"
+msgstr "Выберите язык"
+
+#: ../../frontend/templates/dashboard.html:45
+msgid "Help"
+msgstr "Помощь"
+
+#: ../../frontend/templates/dashboard.html:47
+#: ../../frontend/templates/incident.html:7
+msgid "Report an incident"
+msgstr "Сообщить об инциденте"
+
+#: ../../frontend/templates/dashboard.html:48
+#: ../../frontend/templates/support.html:7
+msgid "Support"
+msgstr "Поддержка"
+
+#: ../../frontend/templates/dashboard.html:61
+msgid "stats"
+msgstr "статистика"
+
+#: ../../frontend/templates/dashboard.html:62
+msgid "DNS records"
+msgstr "записи DNS"
+
+#: ../../frontend/templates/dashboard.html:63
+msgid "users"
+msgstr "пользователи"
+
+#: ../../frontend/templates/dashboard.html:64
+msgid "security"
+msgstr "безопасность"
+
+#: ../../frontend/templates/dashboard.html:65
+msgid "settings"
+msgstr "настройки"
+
+#: ../../frontend/templates/dashboard_no_websites.html:5
+msgid "Welcome to the Deflect dashboard!"
+msgstr "Добро пожаловать в панель управления Deflect!"
+
+#: ../../frontend/templates/dashboard_no_websites.html:11
+msgid "It appears you have no websites yet. Add one to get started."
+msgstr "Кажется у Вас ещё нет веб-сайтов. Добавьте один, чтобы начать."
+
+#: ../../frontend/templates/forgotpassword.html:29
+msgid "Please enter your email"
+msgstr "Пожалуйста, введите Ваш email"
+
+#: ../../frontend/templates/forgotpassword.html:50
+msgid "Reset password"
+msgstr "Сбросить пароль"
+
+#: ../../frontend/templates/incident.html:17
+msgid "Incident report sent successfully!"
+msgstr "Сообщение об инциденте успешно отправлено!"
+
+#: ../../frontend/templates/incident.html:21
+msgid "There was an error sending your incident report."
+msgstr "При отправке сообщения об инциденте возникла ошибка."
+
+#: ../../frontend/templates/incident.html:25
+msgid "Back to"
+msgstr "Назад к"
+
+#: ../../frontend/templates/incident.html:25
+msgid "dashboard home"
+msgstr "начальная страница панели управления"
+
+#: ../../frontend/templates/incident.html:66
+msgid "Send report"
+msgstr "Отправить сообщение"
+
+#: ../../frontend/templates/incident.html:67
+msgid "Submitted content will be kept confidential."
+msgstr "Отправленная информация будет сохранена в секрете."
+
+#: ../../frontend/templates/incident.html:67
+msgid "Privacy policy"
+msgstr "Политика конфиденциальности"
+
+#: ../../frontend/templates/security_settings.html:8
+#: ../../frontend/templates/security_settings.html:16
+#: ../../frontend/templates/website_settings.html:8
+msgid "Your settings were saved successfully."
+msgstr "Ваши настройки были успешно сохранены."
+
+#: ../../frontend/templates/security_settings.html:25
+#: ../../frontend/templates/website_settings.html:44
+msgid "Only website owners can modify website credentials."
+msgstr "Только владельцы веб-сайта могут модифицировать данные о нём."
+
+#: ../../frontend/templates/settings.html:15
+msgid "Update your email address"
+msgstr "Обновить адрес email"
+
+#: ../../frontend/templates/settings.html:41
+msgid "Update your password"
+msgstr "Обновить пароль"
+
+#: ../../frontend/templates/settings.html:45
+msgid "Please update your password before setting up your website."
+msgstr "Пожалуйста, измените свой пароль, перед началом настройки веб-сайта."
+
+#: ../../frontend/templates/settings.html:51
+msgid "Old password"
+msgstr "Старый пароль"
+
+#: ../../frontend/templates/settings.html:61
+msgid "Password updated!"
+msgstr "Пароль изменён!"
+
+#: ../../frontend/templates/settings.html:64
+msgid "Save new password"
+msgstr "Сохранить новый пароль"
+
+#: ../../frontend/templates/signin.html:3
+#: ../../frontend/templates/signin.html:9
+msgid "Signin"
+msgstr "Войти"
+
+#: ../../frontend/templates/signin.html:14
+msgid "Don't have an account?"
+msgstr "Нет учётной записи?"
+
+#: ../../frontend/templates/signin.html:14
+msgid "Signup here"
+msgstr "Зарегистрируйтесь здесь"
+
+#: ../../frontend/templates/signin.html:40
+msgid "Log in"
+msgstr "Войти"
+
+#: ../../frontend/templates/signin.html:46
+msgid "I forgot my password"
+msgstr "Я забыл мой пароль"
+
+#: ../../frontend/templates/signup.html:3
+msgid "Signup"
+msgstr "Зарегистрироваться"
+
+#: ../../frontend/templates/signup.html:9
+msgid "Sign up for Deflect!"
+msgstr "Зарегистрируйтесь в Deflect!"
+
+#: ../../frontend/templates/signup.html:11
+msgid "Already have an account?"
+msgstr "Уже есть учётная запись?"
+
+#: ../../frontend/templates/signup.html:11
+#: ../../frontend/templates/signup_confirmation.html:14
+msgid "Log in here"
+msgstr "Войти здесь"
+
+#: ../../frontend/templates/signup.html:15
+msgid "About your site"
+msgstr "Про ваш сайт"
+
+#: ../../frontend/templates/signup.html:47
+msgid "Sign up!"
+msgstr "Зарегистрируйтесь!"
+
+#: ../../frontend/templates/signup_confirmation.html:9
+msgid "Thanks for signing up!"
+msgstr "Спасибо за регистрацию!"
+
+#: ../../frontend/templates/signup_confirmation.html:13
+msgid "Please check your email. We have sent you a password."
+msgstr "Пожалуйста, проверьте Ваш email. Мы выслали Вам пароль."
+
+#: ../../frontend/templates/signup_confirmation.html:16
+msgid ""
+"If you have not received an email, you can contact us at "
+"outreach@deflect.ca."
+msgstr "Если Вы не получили сообщения, Вы можете связаться с нами тут outreach@deflect.ca."
+
+#: ../../frontend/templates/support.html:17
+msgid "Support request sent successfully!"
+msgstr "Ваш запрос успешно отправлен!"
+
+#: ../../frontend/templates/support.html:21
+msgid "There was an error sending your support ticket."
+msgstr "Во время отправки заявки в службу поддержки произошла ошибка."
+
+#: ../../frontend/templates/support.html:25
+msgid "Back to dashboard"
+msgstr "Назад к панели управления"
+
+#: ../../frontend/templates/support.html:51
+msgid "Send"
+msgstr "Отправить"
+
+#: ../../frontend/templates/website_add.html:5
+msgid "Add new website"
+msgstr "Добавить новый веб-сайт"
+
+#: ../../frontend/templates/website_add.html:42
+msgid "There was an error adding this url. Please double check it."
+msgstr "Во премя добавления этого url произошла ошибка. Пожалуйста, проверьте его ещё раз."
+
+#: ../../frontend/templates/website_add.html:46
+msgid "Add website"
+msgstr "Добавить веб-сайт"
+
+#: ../../frontend/templates/website_dns_records.html:9
+msgid "Current DNS zone file settings."
+msgstr "Настройки файла теущей зоны DNS."
+
+#: ../../frontend/templates/website_dns_records.html:16
+msgid "Only website owners can modify website settings."
+msgstr "Только владельцы сайта могут изменять настройки веб-сайта."
+
+#: ../../frontend/templates/website_settings.html:15
+msgid "Website IP"
+msgstr "IP веб-сайта"
+
+#: ../../frontend/templates/website_settings.html:25
+msgid "Visitor logs"
+msgstr "Логи посетителей"
+
+#: ../../frontend/templates/website_settings.html:38
+#: ../../frontend/templates/setup/include/dns_records_edit.html:76
+#: ../../frontend/templates/setup/include/ssl_uploads.html:48
+msgid "Save"
+msgstr "Сохранить"
+
+#: ../../frontend/templates/website_users.html:9
+msgid "Add a new user to this website."
+msgstr "Добавить нового пользователя к этому сайту."
+
+#: ../../frontend/templates/website_users.html:12
+msgid ""
+"If this user is new to Deflect, they will receive an email with their new "
+"password."
+msgstr "Если этот пользователь новый для Deflect, он получит письмо с их новым паролем."
+
+#: ../../frontend/templates/website_users.html:40
+msgid "Add user"
+msgstr "Добавить пользователя"
+
+#: ../../frontend/templates/website_users.html:58
+msgid "Email"
+msgstr "Email"
+
+#: ../../frontend/templates/website_users.html:62
+msgid "Role"
+msgstr "Роль"
+
+#: ../../frontend/templates/website_users.html:66
+#: ../../frontend/templates/setup/include/dns_records_edit.html:47
+msgid "Edit"
+msgstr "Редактировать"
+
+#: ../../frontend/templates/website_users.html:79
+#: ../../frontend/templates/setup/include/dns_records_edit.html:57
+msgid "Delete"
+msgstr "Удалить"
+
+#: ../../frontend/templates/website_users.html:92
+msgid "Only website owners can modify website users."
+msgstr "Только владельцы веб-сайта могут редактировать пользователей веб-сайта."
+
+#: ../../frontend/templates/base/base_dashboard.html:13
+msgid "Deflect Dashboard"
+msgstr "Панель управления Deflect"
+
+#: ../../frontend/templates/base/base_signup.html:32
+msgid "a project by"
+msgstr "проект"
+
+#: ../../frontend/templates/base/base_signup.html:48
+msgid ""
+"Get protected, stay connected. Deflect is a free service for independent "
+"media, human rights organisations and activists."
+msgstr "Защититесь, подключившись. Deflect /Дифлект/ это бесплатный сервис для независимых медиа, правозащитных организаций и активистов."
+
+#: ../../frontend/templates/base/base_signup.html:49
+msgid ""
+"Once you sign up, we will set things up on our end and get in touch to guide"
+" you through the necessary steps."
+msgstr "После того как Вы зарегистрируетесь, мы подготовим всё со своей стороны и поможем Вам пройти все необходимые шаги."
+
+#: ../../frontend/templates/base/base_signup.html:67
+msgid ""
+"develops open and reusable systems with a focus on privacy, online security,"
+" and information management. Our goal is to create accessible technology and"
+" improve the skill-set needed for defending human rights and freedoms in the"
+" digital age"
+msgstr "разрабатывает открытые системы многократного использования с акцентом на приватность, безопасность онлайн, и управление информацией. Наша цель — создавать доступные технологии и улучшать набор навыков, необходимый для защиты прав человека и свобод в цифровую эпоху"
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:8
+#: ../../frontend/templates/setup/setup_0.html:8
+msgid "Setup your website"
+msgstr "Настройте Ваш веб-сайт"
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:16
+msgid "Website deletion was successful"
+msgstr "Удаление веб-сайта прошло успешно"
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:16
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:22
+msgid "Go back to dashboard"
+msgstr "Назад к панели управления"
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:16
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:22
+msgid "or"
+msgstr "или"
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:17
+msgid "add another website"
+msgstr "добавить ещё один веб-сайт"
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:20
+msgid ""
+"There was an error deleting the website, make sure you are allowed to do "
+"this. If the problem persists, please"
+msgstr "Во время удаления веб-сайта, произошла ошибка, пожалуйста, удостоверьтесь, что у вас хватает прав для этого. Если проблема повторяется, пожалуйста"
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:21
+msgid "let us know"
+msgstr "дайте нам знать"
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:23
+msgid "add another website."
+msgstr "добавить ещё один веб-сайт."
+
+#: ../../frontend/templates/setup/setup_0.html:16
+msgid "To set up your website, you need to"
+msgstr "Для того, чтобы настроить веб-сайт, Вам понадобится"
+
+#: ../../frontend/templates/setup/setup_0.html:19
+msgid "Configure your DNS zone file"
+msgstr "Настройка файла Вашей DNS зоны"
+
+#: ../../frontend/templates/setup/setup_0.html:20
+msgid "Tell Deflect you are ready to join"
+msgstr "Сообщите Deflect, что Вы уже готовы присоединиться"
+
+#: ../../frontend/templates/setup/setup_0.html:21
+msgid "Switch over your nameservers to Deflect"
+msgstr "Переключите Ваши серверы имён (NS) на Deflect"
+
+#: ../../frontend/templates/setup/setup_0.html:24
+msgid "Start setup"
+msgstr "Начать настройку"
+
+#: ../../frontend/templates/setup/setup_0.html:30
+msgid "I've changed my mind, I want to delete this website"
+msgstr "Я передумал, я хочу удалить этот веб-сайт"
+
+#: ../../frontend/templates/setup/setup_0.html:31
+msgid "Delete this website"
+msgstr "Удалить веб-сайт"
+
+#: ../../frontend/templates/setup/setup_1.html:6
+msgid "DNS zone file"
+msgstr "файл зоны DNS"
+
+#: ../../frontend/templates/setup/setup_1.html:14
+msgid "Please review and correct the DNS zone file records below."
+msgstr "Пожалуйста, проверьте и исправьте записи файла зоны DNS ниже."
+
+#: ../../frontend/templates/setup/setup_1.html:19
+msgid "Save, my records are OK"
+msgstr "Сохранить, эти записи правильные"
+
+#: ../../frontend/templates/setup/setup_2.html:6
+#: ../../frontend/templates/setup/setup_2_5.html:6
+msgid "Security"
+msgstr "Безопасность"
+
+#: ../../frontend/templates/setup/setup_3.html:6
+msgid "Finalizing your configuration"
+msgstr "Завершение настройки"
+
+#: ../../frontend/templates/setup/setup_3.html:14
+msgid "Deflect needs to validate your final configuration"
+msgstr "Deflect должен проверить Вашу итоговую конфигурацию"
+
+#: ../../frontend/templates/setup/setup_3.html:15
+msgid ""
+"You will be notified via email once this process is done, and this page will"
+" also be updated accordingly"
+msgstr "Вы будете извещены по email, как только процесс закончится. Эта страница также обновляется автоматически"
+
+#: ../../frontend/templates/setup/setup_3.html:16
+msgid "This process can take up to 24h, but is usually faster"
+msgstr "Процесс может занять до 24 часов, но обычно проходит быстрее"
+
+#: ../../frontend/templates/setup/setup_3.html:20
+msgid "Point your domains' NS settings to"
+msgstr "Перенаправьте NS записи Вашего домена на"
+
+#: ../../frontend/templates/setup/setup_3.html:27
+msgid "Done. NS settings saved"
+msgstr "Готово. Настройки NS сохранены"
+
+#: ../../frontend/templates/setup/setup_3.html:28
+msgid "I'm not sure what this means"
+msgstr "Я не уверен что понимаю, что это значит"
+
+#: ../../frontend/templates/setup/setup_3.html:33
+msgid "Make sure your website is on Deflect"
+msgstr "Удостоверьтесь, что Ваш веб-сайт работает с Deflect"
+
+#: ../../frontend/templates/setup/setup_3.html:37
+msgid ""
+"NS propagation under way. This can take up to a few hours. This page will "
+"refresh automatically."
+msgstr "Идёт процесс передачи NS записей. Это может занять до нескольких часов. Эта страница обновляется автоматически."
+
+#: ../../frontend/templates/setup/setup_3.html:39
+msgid "NS servers are responding correctly."
+msgstr "NS сервера отвечают исправно."
+
+#: ../../frontend/templates/setup/setup_3.html:46
+msgid "Ready to use Deflect!"
+msgstr "Всё готово для использования Deflect!"
+
+#: ../../frontend/templates/setup/setup_3.html:50
+msgid "To my dashboard"
+msgstr "К моей панели управления"
+
+#: ../../frontend/templates/setup/include/dns_records_edit.html:4
+msgid ""
+"Your DNS records are being fetched. This page will refresh automatically"
+msgstr "Получение Ваших записей DNS. Эта страница будет обновляться автоматически"
+
+#: ../../frontend/templates/setup/include/dns_records_edit.html:17
+msgid "Operation successful"
+msgstr "Операция завершена успешно"
+
+#: ../../frontend/templates/setup/include/dns_records_edit.html:35
+msgid "Type"
+msgstr "Тип"
+
+#: ../../frontend/templates/setup/include/dns_records_edit.html:39
+msgid "Hostname"
+msgstr "Имя хоста"
+
+#: ../../frontend/templates/setup/include/help_footer.html:2
+msgid "Need help?"
+msgstr "Нужна помощь?"
+
+#: ../../frontend/templates/setup/include/help_footer.html:2
+msgid "Try our Wiki"
+msgstr "Попробуйте нашу Wiki"
+
+#: ../../frontend/templates/setup/include/security.html:3
+msgid "Website administration credentials"
+msgstr "Сведения об администрировании веб-сайта"
+
+#: ../../frontend/templates/setup/include/security.html:5
+msgid ""
+"To protect your websites' editorial section, Deflect will require privileged"
+" users to"
+msgstr "Чтобы защитить ту часть Вашего веб-сайта, через которую осуществляется публикация и редактирование материалов, Deflect будет требовать привелигированных пользователей "
+
+#: ../../frontend/templates/setup/include/security.html:5
+msgid "authenticate themselves"
+msgstr "аутентифицировать самих себя"
+
+#: ../../frontend/templates/setup/include/security.html:6
+msgid ""
+"Please create a unique password that is not used anywhere else on your website. You will need to share this password\n"
+"        securely with other website editors. You can change this password at any time"
+msgstr "Пожалуйста, создайте уникальный пароль, который не используется больше нигде у Вас на сайте. Вам придётся  передать этот пароль\nбезопасно другим редакторам сайта. Вы можете изменить этот пароль в любое время"
+
+#: ../../frontend/templates/setup/include/security.html:17
+msgid "The link used for accessing your website's admin section"
+msgstr "Ссылка, по которой открывается панель администрирования Вашим сайтом"
+
+#: ../../frontend/templates/setup/include/security.html:37
+msgid ""
+"There was an error adding this password. Please double check it to ensure it"
+" matches the following."
+msgstr "Во время добавления этого пароля произошла ошибка. Пожалуйста, внимательно проверьте его, чтобы удостовериться, что он соответствует приведённому ниже."
+
+#: ../../frontend/templates/setup/include/security.html:41
+msgid "Save password and url"
+msgstr "Сохранить пароль и url"
+
+#: ../../frontend/templates/setup/include/security.html:45
+msgid "Skip, I don't have an admin section"
+msgstr "Пропустить, у меня нет панели администрирования"
+
+#: ../../frontend/templates/setup/include/ssl_uploads.html:3
+msgid "SSL configuration"
+msgstr "настройки SSL"
+
+#: ../../frontend/templates/setup/include/ssl_uploads.html:25
+#: ../../frontend/templates/setup/include/ssl_uploads.html:33
+#: ../../frontend/templates/setup/include/ssl_uploads.html:41
+msgid "Last updated"
+msgstr "Обновлено"
+
+#: ../../frontend/views/dashboard.py:663
+msgid ""
+"Operation was not successful. Please make sure fields are filled in "
+"correctly."
+msgstr "Операция не смогла закончится успешно. Проверьте, что все поля заполнены правильно."
+
+#: ../../frontend/views/signin.py:47
+msgid ""
+"Could not find user. Please check the email and <a "
+"href='/forgotpassword'>try again</a>."
+msgstr "Невозможно найти пользователя. Пожалуйста, проверьте email и <a href='/forgotpassword'>попробуйте снова</a>."
+
+#: ../../frontend/views/signin.py:57
+msgid "There was an error sending your email reset link."
+msgstr "Во время отправки Вам письма со ссылкой для сброса пароля произошла ошибка."
+
+#: ../../frontend/views/signin.py:60
+msgid "Please check your inbox, we have sent you an email reset link."
+msgstr "Пожалуйста, проверьте Ваши \"Входящие\", мы уже выслали Вам письмо со ссылкой для сброса пароля."
+
+#: ../../frontend/views/signin.py:81
+msgid ""
+"Could not find reset link. Please double check the link sent to your email."
+msgstr "Невозможно найти ссылку для сброса пароля. Пожалуйста, внимательно сверьте адрес ссылки с адресом из письма, которое Вы получили."
+
+#: ../../frontend/views/signin.py:101
+msgid "There was an error saving your new password please try again."
+msgstr "Во время сохранения Вашего нового пароля возникла ошибка, пожалуйста, попробуйте снова."
+
+#: ../../frontend/views/signup.py:40
+msgid "Email already exists."
+msgstr "Email уже существует."
+
+#: ../../frontend/views/support.py:45
+msgid "Choose which website is concerned"
+msgstr "Выберите, какого сайта это касается"
+
+#: ../../frontend/views/support.py:49
+msgid "Choose a support type"
+msgstr "Выберите тип поддержки"
+
+#: ../../lib/DB.py:315
+msgid "Could not delete the DNS record."
+msgstr "Невозможно удалить запись DNS."
+
+#: ../../lib/DB.py:336
+msgid "This record already exists."
+msgstr "Эта запись уже существует."
+
+#: ../../lib/DBService.py:216
+msgid "User has already been added to this website."
+msgstr "Пользователь уже был добавлен к этому веб-сайту."
+
+#: ../../lib/DBService.py:218
+msgid "User added successfully."
+msgstr "Пользователь успешно добавлен."
+
+#: ../../lib/DBService.py:232
+msgid ""
+"User was sent a confirmation email and added to this Deflect website "
+"successfully."
+msgstr "Пользователю было отправлено письмо для подтверждения, а также он был успешно добавлен к этому веб-сайту в Deflect."
+
+#: ../../lib/DBService.py:293
+msgid "There was an error retrieving stats, please try again later"
+msgstr "Во время получения статистики произошла ошибка, попробуйте позже."

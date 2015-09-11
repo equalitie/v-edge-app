@@ -1,0 +1,74 @@
+.admin_login{
+    width:300px;
+    height:300px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-150px 0 0 -150px;
+    padding-top: 130px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background: url(../images/deflect_100.png) 40px 30px no-repeat;
+    border-radius: 10px;
+}
+.admin_login .signin_error{
+    line-height: 1em;
+    padding: 0px;
+    font-size: 11px;
+}
+.manage_table table{
+    font-size: 0.9em;
+}
+.manage_table table tr th{
+    max-width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.manage_table.index_table table tr{
+    cursor: pointer;
+}
+.manage_table table tr td{
+    max-width: 50px;
+    text-overflow: ellipsis;
+}
+.bold{
+    font-weight: bold;
+}
+.new_nsinfo{
+    margin-bottom: 15px;
+}
+h4{
+    margin-top: 30px;
+}
+.scan_result{
+    margin-top: 15px;
+}
+.scan_in_progress{
+    display:none;
+}
+.confirm_NS_ok{
+    display:none;
+}
+.loading_ns_changed_email, .loading_website_ready{
+    display:none;
+}
+.ns_confirmation_success, .ns_confirmation_error, .website_ready_success, .website_ready_error{
+    margin-bottom: 10px;
+    display:none;
+}
+.admin_reset_setup{
+    margin-left: 10px;
+}
+.website_delete_admin_section{
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+.ticket_created_dns{
+    margin-bottom: 10px;
+    display:none;
+}
+.edit_zone_records{
+    display: none;
+}

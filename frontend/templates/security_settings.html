@@ -1,0 +1,29 @@
+{% extends "dashboard.html" %}
+
+    {% block website_section %}
+
+        {% if current_user.role == 0 %}
+
+            {% if auth_success %}
+            <div class="bg-success">{{ _("Your settings were saved successfully.") }}</div>
+            {% endif %}
+
+            <div class="settings_section">
+                {% include "setup/include/security.html" %}
+            </div>
+
+            {% if ssl_success %}
+            <div class="bg-success">{{ _("Your settings were saved successfully.") }}</div>
+            {% endif %}
+
+            <div class="settings_section">
+                {% include "setup/include/ssl_uploads.html" %}
+            </div>
+
+        {% else %}
+
+            <p>{{ _("Only website owners can modify website credentials.") }}</p>
+
+        {% endif %}
+
+    {% endblock %}

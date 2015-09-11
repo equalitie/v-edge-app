@@ -1,0 +1,78 @@
+{% extends "dashboard.html" %}
+
+
+
+    {% block content_header %}
+
+            <h2 class="website_url_title">{{ _("Report an incident") }}</h2>
+
+    {% endblock %}
+
+    {% block website_section %}
+
+                {% if request.args["send_successful"] %}
+
+                    {% if request.args["send_successful"] == "1" %}
+                    <div class="bg-success">
+                        {{ _("Incident report sent successfully!") }}
+                    </div>
+                    {% else %}
+                    <div class="bg-danger">
+                        {{ _("There was an error sending your incident report.") }}
+                    </div>
+                    {% endif %}
+
+                    <p style="margin-top: 20px;">{{ _("Back to") }} <a href="/dashboard">{{ _("dashboard home") }}</a>.</p>
+
+                    <br /><br />
+
+                {% elif form %}
+
+                <div>
+                    <form role="form" class="form-horizontal" method="POST">
+
+                        {% for f in form if f.type != 'CSRFTokenField' %}
+
+                            <div class="form-group">
+
+                                {{ f.label(class_="col-sm-3 control-label") }}
+
+                                <div class="col-sm-8">
+                                    {{ f(class_="form-control", placeholder=f.description.placeholder|safe) }}
+
+                                    {% if f.errors %}
+                                    <div class="incident_error">
+                                        {% for e in f.errors %}
+                                            {{ e }}
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+
+                                    {% if f.description.explanation1 %}
+                                        <div class="incident_explanation">
+                                            {{f.description.explanation1 | safe}} <a href='https://wiki.deflect.ca/wiki/Proxy_Via' target='_blank'>{{f.description.explanation2 | safe}}</a>
+                                        </div>
+                                    {% endif %}
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="send_incident_report"></label>
+                            <div class="col-sm-8">
+                                <button id="send_incident_report" type="submit" class="btn btn-success">{{ _("Send report") }}</button>
+                                <p class="privacy_policy">{{ _("Submitted content will be kept confidential.") }} <a class="underline" href="https://wiki.deflect.ca/wiki/Deflect_Public_wiki:Privacy_policy" target="_blank">{{ _("Privacy policy") }}</a></p>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                {% endif %}
+
+    {% endblock %}

@@ -1,0 +1,23 @@
+<div class="help_footer">
+    {% if active_step == 0 %}
+        {{ _("Need help?") }} <a href="https://wiki.deflect.ca/wiki/Deflect/Dashboard/Step0" target="_blank">{{ _("Try our Wiki") }}</a>.
+    {% elif active_step == 0.5 %}
+        <input type="button" class="btn btn-warning btn-sm button-previous-step" onclick="document.location=0" value='&#8592; {{ _("Return to previous step") }}'>
+        {{ _("Need help?") }} <a href="https://wiki.deflect.ca/wiki/Deflect/Dashboard/Step1" target="_blank">{{ _("Try our Wiki") }}</a>.
+    {% elif active_step == 1 %}
+        <input type="button" class="btn btn-warning btn-sm button-previous-step" onclick="document.location=0.5" value='&#8592; {{ _("Return to previous step") }}'>
+        {{ _("Need help?") }} <a href="https://wiki.deflect.ca/wiki/Deflect/Dashboard/Step1" target="_blank">{{ _("Try our Wiki") }}</a>.
+    {% elif active_step == 2 %}
+        <input type="button" class="btn btn-warning btn-sm button-previous-step" onclick="document.location=1" value='&#8592; {{ _("Return to previous step") }}'>
+        {{ _("Need help?") }} <a href="https://wiki.deflect.ca/wiki/Deflect/Dashboard/Step2" target="_blank">{{ _("Try our Wiki") }}</a>.
+    {% elif active_step == 2.5 %}
+        <input type="button" class="btn btn-warning btn-sm button-previous-step" onclick="document.location=2" value='&#8592; {{ _("Return to previous step") }}'>
+        {{ _("Need help?") }} <a href="https://wiki.deflect.ca/wiki/Deflect/Dashboard/Step2" target="_blank">{{ _("Try our Wiki") }}</a>.
+    {% elif active_step == 3 %}
+    <input type="button" class="btn btn-warning btn-sm button-previous-step" onclick="document.location=2.5" value='&#8592; {{ _("Return to previous step") }}'>
+        {{ _("Need help?") }} <a href="https://wiki.deflect.ca/wiki/Deflect/Dashboard/Step4" target="_blank">{{ _("Try our Wiki") }}</a>.
+    {% else %}
+        {{ _("Need help?") }} <a href="https://wiki.deflect.ca/wiki/Main_Page" target="_blank">{{ _("Try our Wiki") }}</a>.
+    {% endif %}
+
+</div>

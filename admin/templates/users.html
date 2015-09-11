@@ -1,0 +1,84 @@
+{% extends "base/base_admin.html" %}
+
+{% block body %}
+
+        <div class="background_left"></div>
+        <div class="dashboard_left">
+
+            <div class="deflect_logo">
+                <a href="//deflect.ca" target="_blank">
+                    <img src="/static/images/deflect_100.png" />
+                </a>
+            </div>
+
+            <h3 class="deflected_websites">Deflected websites</h3>
+            <ul>
+                <li class="normal"><a href="/manage">Manage websites</a></li>
+                <li class="normal"><a href="/users">Manage users</a></li>
+            </ul>
+
+            <h3 class="my_account">My account</h3>
+            <ul>
+                <li class="normal"><a href="/logout">Logout</a></li>
+            </ul>
+
+        </div>
+
+        <div class="dashboard_right">
+
+            <div id="content_header">
+            {% block content_header %}
+                <h2 class="website_url_title">Users</h2>
+            {% endblock %}
+            </div>
+
+            <div id="content_main">
+
+                    <table class="users-table" class="display" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Status</th>
+                                <th>Email</th>
+                                <th>Date joined</th>
+                                <th>websites</th>
+                                <th>Edit</th>
+                            </tr>
+                        </thead>
+
+                        <tfoot>
+                            <tr>
+                                <th>Id</th>
+                                <th>Status</th>
+                                <th>Email</th>
+                                <th>Date joined</th>
+                                <th>websites</th>
+                                <th>Edit</th>
+                            </tr>
+                        </tfoot>
+
+                        <tbody>
+
+                            {% for user in users %}
+
+                            <tr>
+                                <td>{{ user['id'] }}</td>
+                                <td>{{ user['status'] }}</td>
+                                <td>{{ user['email'] }}</td>
+                                <td>{{ user['date_joined'] }}</td>
+                                <td><ul>{% for url in user['urls'] %} <li>{{ url['url'] }}</li>{% endfor %}</ul></td>
+                                <td>{% if user['urls'][0]['url'] == None %} <a href="/delete_user/{{user['id']}}">Delete</a> {% endif %} </td>
+                            </tr>
+
+                            {% endfor %}
+
+                        </tbody>
+                    </table>
+
+            </div>
+
+        </div>
+
+        <div class="top"></div>
+
+{% endblock %}

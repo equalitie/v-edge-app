@@ -1,0 +1,812 @@
+# French translations for PROJECT.
+# Copyright (C) 2014 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-07-22 22:13-0400\n"
+"PO-Revision-Date: 2014-11-26 00:20-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../lib/DB.py:342
+msgid "Could not delete the DNS record."
+msgstr "Impossible de supprimer cette entrée DNS."
+
+#: ../../lib/DB.py:363
+#, fuzzy
+msgid "This record already exists."
+msgstr "Cette entrée existe déjà."
+
+#: ../../lib/DBService.py:216
+msgid "User has already been added to this website."
+msgstr "Usager est déjà ajouté."
+
+#: ../../lib/DBService.py:218
+msgid "User added successfully."
+msgstr "Usager ajouté avec succès"
+
+#: ../../lib/DBService.py:232
+msgid ""
+"User was sent a confirmation email and added to this Deflect website "
+"successfully."
+msgstr ""
+"Le nouvel usager recevra sous peu un nouveau courriel de confirmation. Il"
+" a été ajouté avec succès au site web."
+
+#: ../../lib/DBService.py:258
+msgid "Are you sure this is correct? Your CNAME records does not end in a '.'"
+msgstr ""
+
+#: ../../lib/DBService.py:307
+msgid "There was an error retrieving stats, please try again later"
+msgstr "Une erreur s'est produite. Veuillez réessayer plus tard."
+
+#: ../../lib/models/MailSender.py:19
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"\n"
+"Thank you for signing up on Deflect!\n"
+"\n"
+"\n"
+"Your account has been created on the Deflect Dashboard. Please login by "
+"going to https://dashboard.deflect.ca/login and using your email and this"
+" password: %s\n"
+"\n"
+"If you have any questions, please don't hesitate to contact us at "
+"deflect@equalit.ie\n"
+"\n"
+"\n"
+"- The Deflect team\n"
+msgstr ""
+
+#: ../../lib/models/MailSender.py:38
+#, python-format
+msgid ""
+"A new user (%s) has signed up for deflect.\n"
+"\n"
+"- website: %s\n"
+"- IP: %s\n"
+"- pgp key: \n"
+"\n"
+"%s\n"
+"\n"
+"\n"
+"- request headers: \n"
+"\n"
+"%s\n"
+"        "
+msgstr ""
+
+#: ../../lib/models/MailSender.py:44
+msgid "New user signup for Deflect"
+msgstr ""
+
+#: ../../lib/models/MailSender.py:64
+#, python-format
+msgid ""
+"Hi! Deflect needs you to take action in order to complete the setup "
+"process for your website: %s.\n"
+"You need to change your domains' NS to the following:\n"
+"\n"
+"%s\n"
+"\n"
+"Once you are done, go to your dashboard and complete the setup process "
+"here: %s\n"
+"\n"
+"If you have already changed your NS records, please log into the "
+"dashboard and complete your setup process.\n"
+"\n"
+"- The Deflect team\n"
+"                "
+msgstr ""
+
+#: ../../lib/models/MailSender.py:75
+msgid "Deflect website setup: action required on your part."
+msgstr ""
+
+#: ../../lib/models/MailSender.py:90
+#, python-format
+msgid ""
+"Congratulations, you are ready to use Deflect for your website %s!\n"
+"Go to your dashboard %s to manage your settings.\n"
+"\n"
+"- The Deflect team\n"
+"                "
+msgstr ""
+
+#: ../../lib/models/MailSender.py:95
+msgid "Your Deflect website is ready."
+msgstr ""
+
+#: ../../lib/models/MailSender.py:110
+#, python-format
+msgid ""
+"You have requested a link to reset your password. To do so, please go to:"
+"\n"
+"%s\n"
+"\n"
+"- The Deflect team\n"
+"                "
+msgstr ""
+
+#: ../../lib/models/MailSender.py:115
+#, fuzzy
+msgid "Your password reset link."
+msgstr "Nouveau mot de passe (répétez)"
+
+#: ../../frontend/forms/incident.py:14
+msgid "Choose website *"
+msgstr "Site web concerné *"
+
+#: ../../frontend/forms/incident.py:16
+msgid "Incident date and time *"
+msgstr "Jour et heure de l'incident *"
+
+#: ../../frontend/forms/incident.py:21
+msgid "Problem description *"
+msgstr "Description du problème *"
+
+#: ../../frontend/forms/incident.py:22
+msgid "What were you doing? Where did you come from?"
+msgstr "Que faisiez-vous?"
+
+#: ../../frontend/forms/incident.py:26
+msgid "Contact email"
+msgstr "Courriel contact"
+
+#: ../../frontend/forms/incident.py:31
+msgid "This field is optional."
+msgstr "Ce champ est optionel."
+
+#: ../../frontend/forms/incident.py:32
+msgid "How to find the via header."
+msgstr "Comment trouver l'entête via"
+
+#: ../../frontend/forms/incident.py:35
+msgid "Via header"
+msgstr "L'entête via"
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:21
+#, fuzzy
+msgid "Name"
+msgstr "Nom"
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:24
+msgid "Value"
+msgstr "Valeur"
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:27
+msgid "Priority"
+msgstr ""
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:30
+msgid "Weight"
+msgstr ""
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:33
+msgid "Use Deflect"
+msgstr "Utiliser Deflect"
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:33
+#, fuzzy
+msgid "Don't use Deflect"
+msgstr "Ne pas utiliser Deflect"
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:39
+msgid "Please provide a {} value."
+msgstr ""
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:43
+#, fuzzy
+msgid "Incorrect {} value."
+msgstr "Valeur priorité est erronée."
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:63
+#, fuzzy
+msgid "Incorrect A record value."
+msgstr "Valeur priorité est erronée."
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:76
+msgid "Invalid value for CNAME."
+msgstr ""
+
+#: ../../frontend/forms/new_user.py:16
+#, fuzzy
+msgid "Enter email"
+msgstr " courriel"
+
+#: ../../frontend/forms/new_user.py:19
+msgid "Administrator"
+msgstr "Administrateur"
+
+#: ../../frontend/forms/new_website.py:14
+#: ../../frontend/forms/new_website.py:15
+#, fuzzy
+msgid "Website URL"
+msgstr "URL du site Web"
+
+#: ../../frontend/forms/new_website.py:28
+#: ../../frontend/forms/website_settings.py:16
+#, fuzzy
+msgid "IP address *"
+msgstr "Adresse IP *"
+
+#: ../../frontend/forms/new_website.py:29
+msgid "IP address: 129.128.127.126"
+msgstr "Adresse IP: 129.128.127.126"
+
+#: ../../frontend/forms/security_settings.py:14
+#, fuzzy
+msgid "Authentication password"
+msgstr "Sauvegarder"
+
+#: ../../frontend/forms/security_settings.py:16
+msgid "New authentication password"
+msgstr "Nouveau mot de passe"
+
+#: ../../frontend/forms/security_settings.py:26
+msgid ""
+"Cannot start with 'http' - this field should contain the URL component "
+"for your admin interface."
+msgstr ""
+
+#: ../../frontend/forms/security_ssl.py:16
+msgid "My website uses SSL"
+msgstr "Mon site web utilise SSl"
+
+#: ../../frontend/forms/security_ssl.py:17
+msgid "Certificate file"
+msgstr "Fichier de certificat"
+
+#: ../../frontend/forms/security_ssl.py:18
+msgid "Key file"
+msgstr "Fichier clé"
+
+#: ../../frontend/forms/security_ssl.py:19
+msgid "Chain file"
+msgstr "Fichier chaîne"
+
+#: ../../frontend/forms/security_ssl.py:34
+msgid "Certificate file and key file needed."
+msgstr "Un fichier de certifical et un fichier clé sont néecessaires."
+
+#: ../../frontend/forms/security_ssl.py:40
+msgid "Certificate file must have a .crt extension."
+msgstr "Le fichier de certificat doit avoir une extension .crt"
+
+#: ../../frontend/forms/security_ssl.py:46
+msgid "Key file must have a .key extension."
+msgstr "Le fichier clé doit avoir une extension .key"
+
+#: ../../frontend/forms/settings.py:14
+#, fuzzy
+msgid "New email"
+msgstr " courriel"
+
+#: ../../frontend/forms/settings.py:35
+#, fuzzy
+msgid "New passwords must match"
+msgstr "Les mots de passe sont différents"
+
+#: ../../frontend/forms/settings.py:40
+#, fuzzy
+msgid "Old password does not match."
+msgstr "Les mots de passe sont différents"
+
+#: ../../frontend/forms/signup_login.py:19
+msgid "email"
+msgstr " courriel"
+
+#: ../../frontend/forms/signup_login.py:24
+msgid "password"
+msgstr "mot de passe"
+
+#: ../../frontend/forms/signup_login.py:34
+msgid "You have attempted too many failed logins. Please try again in 5 minutes."
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:38
+#: ../../frontend/forms/signup_login.py:47
+msgid "Invalid password"
+msgstr "Most de passe invalide"
+
+#: ../../frontend/forms/signup_login.py:55
+msgid "Invalid user"
+msgstr "Usager invalide"
+
+#: ../../frontend/forms/signup_login.py:66
+msgid "Domain name *"
+msgstr "Nom de domaine *"
+
+#: ../../frontend/forms/signup_login.py:67
+msgid "http://www.example.com"
+msgstr "http://www.exemple.com"
+
+#: ../../frontend/forms/signup_login.py:71
+msgid "IP Address *"
+msgstr "Adresse IP *"
+
+#: ../../frontend/forms/signup_login.py:76
+#: ../../frontend/forms/signup_login.py:100
+msgid "Email *"
+msgstr "Courriel *"
+
+#: ../../frontend/forms/signup_login.py:80
+msgid "I use PGP"
+msgstr "J'utilise PGP"
+
+#: ../../frontend/forms/signup_login.py:82
+#: ../../frontend/forms/signup_login.py:83
+msgid "PGP Key"
+msgstr "Clé PGP"
+
+#: ../../frontend/forms/signup_login.py:92
+msgid "You are not allowed to sign up for this website."
+msgstr "Erreur à l'enregistrement du site Web."
+
+#: ../../frontend/forms/signup_login.py:111
+msgid "Password"
+msgstr "Mot de passe"
+
+#: ../../frontend/forms/signup_login.py:114
+msgid "New password"
+msgstr "Nouveau mot de passe"
+
+#: ../../frontend/forms/signup_login.py:120
+msgid "New password (repeat)"
+msgstr "Nouveau mot de passe (répétez)"
+
+#: ../../frontend/forms/signup_login.py:125
+msgid "Passwords do not match"
+msgstr "Les mots de passe dont différents"
+
+#: ../../frontend/forms/support.py:14
+msgid "Comment"
+msgstr "Commentaire"
+
+#: ../../frontend/forms/website_settings.py:21
+msgid "Collect visitor logs"
+msgstr "Receuillir les journaux de visiteurs"
+
+#: ../../frontend/forms/website_settings.py:26
+msgid "Website cache minutes"
+msgstr ""
+
+#: ../../frontend/views/signin.py:51
+msgid ""
+"Could not find user. Please check the email and <a "
+"href='/forgotpassword'>try again</a>."
+msgstr ""
+"Usager introuvable. Veuillez revérifer le courriel et <a "
+"href='/forgotpassword'>réessayer</a>."
+
+#: ../../frontend/views/signin.py:61
+#, fuzzy
+msgid "There was an error sending your email reset link."
+msgstr "Une erreur s'est produite lors de l'envoi."
+
+#: ../../frontend/views/signin.py:64
+#, fuzzy
+msgid "Please check your inbox, we have sent you an email reset link."
+msgstr ""
+"Veuillez vérifier votre courriel, nous venons d'envoyer un lien pour "
+"réinitialiser votre mot de passe."
+
+#: ../../frontend/views/signin.py:85
+msgid ""
+"Could not find reset link. Please double check the link sent to your "
+"email."
+msgstr ""
+"Le lien de réinitialisation n'a pas été trouvé. Veuillez revérifier le "
+"courriel envoyé."
+
+#: ../../frontend/views/signin.py:105
+#, fuzzy
+msgid "There was an error saving your new password please try again."
+msgstr "Une erreur s'est produite. Veuillez réessayer plus tard."
+
+#: ../../frontend/views/signup.py:40
+msgid "Email already exists."
+msgstr "Ce courriel existe déjà."
+
+#: ../../frontend/views/support.py:45
+msgid "Choose which website is concerned"
+msgstr "Site web concerné"
+
+#: ../../frontend/views/support.py:49
+msgid "Choose a support type"
+msgstr "Type de support"
+
+#: ../../config/default.py:43
+msgid "DNS zone file configuration issues"
+msgstr "Problèmes de configuration DNS"
+
+#: ../../config/default.py:44
+msgid "General support"
+msgstr "Support général"
+
+#: ../../config/default.py:45
+#, fuzzy
+msgid "Incident report"
+msgstr "Signaler un problème"
+
+#~ msgid "This field is required."
+#~ msgstr "Ce champ est obligatoire."
+
+#~ msgid "Invalid URL."
+#~ msgstr "Usager invalide"
+
+#~ msgid "Invalid IP address."
+#~ msgstr "Most de passe invalide"
+
+#~ msgid "Invalid email."
+#~ msgstr "Usager invalide"
+
+#~ msgid "Field length must be at least 8."
+#~ msgstr ""
+
+#~ msgid ""
+#~ msgstr "Une erreur s'est produite. Veuillez vérifer les valeurs saisies."
+
+#~ msgid "Collaborator"
+#~ msgstr "Collaborateur"
+
+#~ msgid "Chain file must have a .crt extension."
+#~ msgstr "Le fichier de chaîne doit avoir une extension .crt"
+
+#~ msgid "Forgot your password"
+#~ msgstr "Oublié votre mot de passe?"
+
+#~ msgid "Forgot your password?"
+#~ msgstr "Oublié votre mot de passe?"
+
+#~ msgid "Your password was successfully saved!"
+#~ msgstr "Votre mot de passe a été sauvegardé avec succès!"
+
+#~ msgid "Back to login"
+#~ msgstr "Revenir à la page de connexion."
+
+#~ msgid "Please enter your new password."
+#~ msgstr "Veuillez mettre à jour votre mot de passe"
+
+#~ msgid "Change password"
+#~ msgstr "Sauvegarder"
+
+#~ msgid "Deflected websites"
+#~ msgstr "Sites protégés"
+
+#~ msgid "You have no websites yet."
+#~ msgstr "Vous n'avez pas de sites protégés."
+
+#~ msgid "Add a new website"
+#~ msgstr "Ajouter un site Web"
+
+#~ msgid "My account"
+#~ msgstr "Mon profil"
+
+#~ msgid "Settings"
+#~ msgstr "Paramètres"
+
+#~ msgid "Logout"
+#~ msgstr "Déconnexion"
+
+#~ msgid "Language"
+#~ msgstr "Langue"
+
+#~ msgid "Choose language"
+#~ msgstr "Choix de langues"
+
+#~ msgid "Help"
+#~ msgstr "Aide"
+
+#~ msgid "Report an incident"
+#~ msgstr "Signaler un problème"
+
+#~ msgid "Support"
+#~ msgstr "Support"
+
+#~ msgid "stats"
+#~ msgstr "stats"
+
+#~ msgid "DNS records"
+#~ msgstr "entrées DNS"
+
+#~ msgid "users"
+#~ msgstr "usagers"
+
+#~ msgid "security"
+#~ msgstr "sécurité"
+
+#~ msgid "settings"
+#~ msgstr "paramètres"
+
+#~ msgid "Welcome to the Deflect dashboard!"
+#~ msgstr "Bienvenue au tableau de bord Deflect!"
+
+#~ msgid "It appears you have no websites yet. Add one to get started."
+#~ msgstr "Ajoutez un site Web pour démarrer."
+
+#~ msgid "Please enter your email"
+#~ msgstr "Veuillez saisir votre courriel"
+
+#~ msgid "Reset password"
+#~ msgstr "Nouveau mot de passe"
+
+#~ msgid "Incident report sent successfully!"
+#~ msgstr "Rapport d'incident envoyé avec succès!"
+
+#~ msgid "There was an error sending your incident report."
+#~ msgstr "Une erreur s'est produite lors de l'envoi."
+
+#~ msgid "Back to"
+#~ msgstr "Revenir à"
+
+#~ msgid "dashboard home"
+#~ msgstr "l'accueil"
+
+#~ msgid "Send report"
+#~ msgstr "Signaler un problème"
+
+#~ msgid "Submitted content will be kept confidential."
+#~ msgstr "Votre soumission est confidentielle."
+
+#~ msgid "Privacy policy"
+#~ msgstr "Politique de confidentialité"
+
+#~ msgid "Your settings were saved successfully."
+#~ msgstr "Usager ajouté avec succès"
+
+#~ msgid "Only website owners can modify website credentials."
+#~ msgstr ""
+
+#~ msgid "Update your email address"
+#~ msgstr "Mettez à jour votre adresse courriel"
+
+#~ msgid "Update your password"
+#~ msgstr "Mettre à jour votre mot de passe"
+
+#~ msgid "Please update your password before setting up your website."
+#~ msgstr "Veuillez mettre à jour votre mot de passe avant de continuer."
+
+#~ msgid "Old password"
+#~ msgstr "mot de passe"
+
+#~ msgid "Password updated!"
+#~ msgstr "mot de passe"
+
+#~ msgid "Save new password"
+#~ msgstr "Nouveau mot de passe"
+
+#~ msgid "Signin"
+#~ msgstr "Connexion"
+
+#~ msgid "Don't have an account?"
+#~ msgstr "Pas enregistré?"
+
+#~ msgid "Signup here"
+#~ msgstr "Faites-le ici"
+
+#~ msgid "Log in"
+#~ msgstr "Connexion"
+
+#~ msgid "I forgot my password"
+#~ msgstr "J'ai oublié mon mot de passe"
+
+#~ msgid "Signup"
+#~ msgstr "Enregistrement"
+
+#~ msgid "Sign up for Deflect!"
+#~ msgstr "Créez un compte Deflect!"
+
+#~ msgid "Already have an account?"
+#~ msgstr "Déjà enregistré?"
+
+#~ msgid "Log in here"
+#~ msgstr "Connectez-vous ici"
+
+#~ msgid "About your site"
+#~ msgstr "À propos de votre site"
+
+#~ msgid "Sign up!"
+#~ msgstr "Enregistrement!"
+
+#~ msgid "Thanks for signing up!"
+#~ msgstr "Merci!"
+
+#~ msgid "Please check your email. We have sent you a password."
+#~ msgstr ""
+
+#~ msgid "Support request sent successfully!"
+#~ msgstr "Rapport d'incident envoyé avec succès!"
+
+#~ msgid "There was an error sending your support ticket."
+#~ msgstr "Une erreur s'est produite lors de l'envoi."
+
+#~ msgid "Back to dashboard"
+#~ msgstr "Retour au tableau de bord"
+
+#~ msgid "Send"
+#~ msgstr "Envoyer"
+
+#~ msgid "Add new website"
+#~ msgstr "Ajouter un site Web"
+
+#~ msgid "There was an error adding this url. Please double check it."
+#~ msgstr ""
+
+#~ msgid "Add website"
+#~ msgstr "Ajouter un site Web"
+
+#~ msgid "Current DNS zone file settings."
+#~ msgstr ""
+
+#~ msgid "Only website owners can modify website settings."
+#~ msgstr ""
+
+#~ msgid "Website IP"
+#~ msgstr "IP du site web"
+
+#~ msgid "Visitor logs"
+#~ msgstr "Journaux de visiteurs"
+
+#~ msgid "Save"
+#~ msgstr "Sauvegarder"
+
+#~ msgid "Add a new user to this website."
+#~ msgstr "Ajouter un usager à ce site Web"
+
+#~ msgid "Add user"
+#~ msgstr "Ajouter un nouvel usager"
+
+#~ msgid "Email"
+#~ msgstr " courriel"
+
+#~ msgid "Role"
+#~ msgstr "Role"
+
+#~ msgid "Edit"
+#~ msgstr "Modifier"
+
+#~ msgid "Delete"
+#~ msgstr "Supprimer"
+
+#~ msgid "Only website owners can modify website users."
+#~ msgstr "Seulement les propriétaires des sites peuvent modifier les usagers."
+
+#~ msgid "Deflect Dashboard"
+#~ msgstr "Tableau de bord Deflect"
+
+#~ msgid "a project by"
+#~ msgstr "un project par"
+
+#~ msgid "Setup your website"
+#~ msgstr "Installation de votre site web"
+
+#~ msgid "Website deletion was successful"
+#~ msgstr "Site web supprimé avec succès."
+
+#~ msgid "Go back to dashboard"
+#~ msgstr "Retour au tableau de bord"
+
+#~ msgid "or"
+#~ msgstr "ou"
+
+#~ msgid "add another website"
+#~ msgstr "Ajouter un site Web"
+
+#~ msgid "let us know"
+#~ msgstr "nous en informer"
+
+#~ msgid "add another website."
+#~ msgstr "Ajouter un site Web"
+
+#~ msgid "To set up your website, you need to"
+#~ msgstr "Pour installer votre site web, vous devez"
+
+#~ msgid "Configure your DNS zone file"
+#~ msgstr "configurer votre fichier d'entrées DNS"
+
+#~ msgid "Tell Deflect you are ready to join"
+#~ msgstr "Nous indiquer que vous êtes prêts à joindre Deflect"
+
+#~ msgid "Point your nameservers to Deflect"
+#~ msgstr "Pointer vos nameservers vers Deflect"
+
+#~ msgid "Start setup"
+#~ msgstr "Commencer l'installation"
+
+#~ msgid "I've changed my mind, I want to delete this website"
+#~ msgstr "J'ai changé d'idée, je veux supprimer ce site web"
+
+#~ msgid "Delete this website"
+#~ msgstr "Supprimer ce site"
+
+#~ msgid "DNS zone file"
+#~ msgstr "Fichier de zone DNS"
+
+#~ msgid "Please review and correct the DNS zone file records below."
+#~ msgstr "Veuillez réviser et corriger les entrées de fichier DNS ci-dessous."
+
+#~ msgid "Save, my records are OK"
+#~ msgstr "Sauvegarder, mes entrées sont OK"
+
+#~ msgid "Security"
+#~ msgstr "Sécurité"
+
+#~ msgid "Finalizing your configuration"
+#~ msgstr "Paramètres SSL"
+
+#~ msgid "Deflect needs to validate your final configuration"
+#~ msgstr "Deflect doit valider votre configuration finale."
+
+#~ msgid "This process can take up to 24h, but is usually faster"
+#~ msgstr ""
+
+#~ msgid "Point your domains' NS settings to"
+#~ msgstr "Pointez l'entrée NS de votre domaine vers"
+
+#~ msgid "Done. NS settings saved"
+#~ msgstr "Terminé. Paramètres NS sauvegardés"
+
+#~ msgid "I'm not sure what this means"
+#~ msgstr "Je ne comprend pas la signification de ceci"
+
+#~ msgid "Make sure your website is on Deflect"
+#~ msgstr "Assurez-vous que votre site web est sur Deflect"
+
+#~ msgid "NS servers are responding correctly."
+#~ msgstr "Serveurs NS sont configurés correctement."
+
+#~ msgid "Ready to use Deflect!"
+#~ msgstr "Prêts à utiliser Deflect!"
+
+#~ msgid "To my dashboard"
+#~ msgstr "Aller au tableau de bord"
+
+#~ msgid "Operation successful"
+#~ msgstr "Opération terminée avec succès"
+
+#~ msgid "Type"
+#~ msgstr "Type"
+
+#~ msgid "Hostname"
+#~ msgstr "Nom d'hôte"
+
+#~ msgid "Need help?"
+#~ msgstr "Besoin d'aide?"
+
+#~ msgid "Try our Wiki"
+#~ msgstr "Voir notre Wiki"
+
+#~ msgid "Website administration credentials"
+#~ msgstr "Mots de passe pour section d'administration de votre site web"
+
+#~ msgid "authenticate themselves"
+#~ msgstr "de vous identifier"
+
+#~ msgid "The link used for accessing your website's admin section"
+#~ msgstr "Le lien pour accéder à la page d'aministration de votre site web."
+
+#~ msgid "Save password and url"
+#~ msgstr "Sauvegarder le mot de passe et URL"
+
+#~ msgid "Skip, I don't have an admin section"
+#~ msgstr "Sauter cette étape, je 'ai pas de section administrative"
+
+#~ msgid "SSL configuration"
+#~ msgstr "Paramètres SSL"
+
+#~ msgid "Last updated"
+#~ msgstr "Mis à jour"
+

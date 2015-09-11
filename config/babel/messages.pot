@@ -1,0 +1,1071 @@
+# Translations template for PROJECT.
+# Copyright (C) 2015 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-07-22 22:21-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../config/default.py:43
+msgid "DNS zone file configuration issues"
+msgstr ""
+
+#: ../../config/default.py:44
+msgid "General support"
+msgstr ""
+
+#: ../../config/default.py:45
+msgid "Incident report"
+msgstr ""
+
+#: ../../frontend/forms/incident.py:14
+msgid "Choose website *"
+msgstr ""
+
+#: ../../frontend/forms/incident.py:16
+msgid "Incident date and time *"
+msgstr ""
+
+#: ../../frontend/forms/incident.py:21
+msgid "Problem description *"
+msgstr ""
+
+#: ../../frontend/forms/incident.py:22
+msgid "What were you doing? Where did you come from?"
+msgstr ""
+
+#: ../../frontend/forms/incident.py:26
+msgid "Contact email"
+msgstr ""
+
+#: ../../frontend/forms/incident.py:31
+msgid "This field is optional."
+msgstr ""
+
+#: ../../frontend/forms/incident.py:32
+msgid "How to find the via header."
+msgstr ""
+
+#: ../../frontend/forms/incident.py:35
+msgid "Via header"
+msgstr ""
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:21
+#: ../../frontend/templates/setup/include/dns_records_edit.html:49
+msgid "Name"
+msgstr ""
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:24
+#: ../../frontend/templates/setup/include/dns_records_edit.html:53
+msgid "Value"
+msgstr ""
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:27
+msgid "Priority"
+msgstr ""
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:30
+msgid "Weight"
+msgstr ""
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:33
+#: ../../frontend/templates/setup/include/dns_records_edit.html:41
+msgid "Use Deflect"
+msgstr ""
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:33
+msgid "Don't use Deflect"
+msgstr ""
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:39
+msgid "Please provide a {} value."
+msgstr ""
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:43
+msgid "Incorrect {} value."
+msgstr ""
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:63
+msgid "Incorrect A record value."
+msgstr ""
+
+#: ../../frontend/forms/new_dns_zone_file_record.py:76
+msgid "Invalid value for CNAME."
+msgstr ""
+
+#: ../../frontend/forms/new_user.py:16
+msgid "Enter email"
+msgstr ""
+
+#: ../../frontend/forms/new_user.py:19
+msgid "Administrator"
+msgstr ""
+
+#: ../../frontend/forms/new_website.py:14
+#: ../../frontend/forms/new_website.py:15
+msgid "Website URL"
+msgstr ""
+
+#: ../../frontend/forms/new_website.py:28
+#: ../../frontend/forms/website_settings.py:16
+msgid "IP address *"
+msgstr ""
+
+#: ../../frontend/forms/new_website.py:29
+msgid "IP address: 129.128.127.126"
+msgstr ""
+
+#: ../../frontend/forms/security_settings.py:14
+msgid "Authentication password"
+msgstr ""
+
+#: ../../frontend/forms/security_settings.py:16
+msgid "New authentication password"
+msgstr ""
+
+#: ../../frontend/forms/security_settings.py:26
+msgid ""
+"Cannot start with 'http' - this field should contain the URL component "
+"for your admin interface."
+msgstr ""
+
+#: ../../frontend/forms/security_ssl.py:16
+msgid "My website uses SSL"
+msgstr ""
+
+#: ../../frontend/forms/security_ssl.py:17
+#: ../../frontend/templates/setup/include/ssl_uploads.html:24
+msgid "Certificate file"
+msgstr ""
+
+#: ../../frontend/forms/security_ssl.py:18
+#: ../../frontend/templates/setup/include/ssl_uploads.html:32
+msgid "Key file"
+msgstr ""
+
+#: ../../frontend/forms/security_ssl.py:19
+#: ../../frontend/templates/setup/include/ssl_uploads.html:40
+msgid "Chain file"
+msgstr ""
+
+#: ../../frontend/forms/security_ssl.py:34
+msgid "Certificate file and key file needed."
+msgstr ""
+
+#: ../../frontend/forms/security_ssl.py:40
+msgid "Certificate file must have a .crt extension."
+msgstr ""
+
+#: ../../frontend/forms/security_ssl.py:46
+msgid "Key file must have a .key extension."
+msgstr ""
+
+#: ../../frontend/forms/settings.py:14
+msgid "New email"
+msgstr ""
+
+#: ../../frontend/forms/settings.py:35
+msgid "New passwords must match"
+msgstr ""
+
+#: ../../frontend/forms/settings.py:40
+msgid "Old password does not match."
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:19
+msgid "email"
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:24
+msgid "password"
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:34
+msgid "You have attempted too many failed logins. Please try again in 5 minutes."
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:38
+#: ../../frontend/forms/signup_login.py:47
+msgid "Invalid password"
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:55
+msgid "Invalid user"
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:66
+msgid "Domain name *"
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:67
+msgid "http://www.example.com"
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:71
+msgid "IP Address *"
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:76
+#: ../../frontend/forms/signup_login.py:100
+msgid "Email *"
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:80
+msgid "I use PGP"
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:82
+#: ../../frontend/forms/signup_login.py:83
+msgid "PGP Key"
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:92
+msgid "You are not allowed to sign up for this website."
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:111
+msgid "Password"
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:114
+#: ../../frontend/templates/settings.html:60
+msgid "New password"
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:120
+#: ../../frontend/templates/settings.html:63
+msgid "New password (repeat)"
+msgstr ""
+
+#: ../../frontend/forms/signup_login.py:125
+msgid "Passwords do not match"
+msgstr ""
+
+#: ../../frontend/forms/support.py:14 ../../frontend/templates/support.html:45
+msgid "Comment"
+msgstr ""
+
+#: ../../frontend/forms/website_settings.py:21
+msgid "Collect visitor logs"
+msgstr ""
+
+#: ../../frontend/forms/website_settings.py:26
+msgid "Website cache minutes"
+msgstr ""
+
+#: ../../frontend/templates/changepassword.html:3
+msgid "Forgot your password"
+msgstr ""
+
+#: ../../frontend/templates/changepassword.html:9
+#: ../../frontend/templates/forgotpassword.html:3
+#: ../../frontend/templates/forgotpassword.html:9
+msgid "Forgot your password?"
+msgstr ""
+
+#: ../../frontend/templates/changepassword.html:19
+msgid "Your password was successfully saved!"
+msgstr ""
+
+#: ../../frontend/templates/changepassword.html:19
+msgid "Back to login"
+msgstr ""
+
+#: ../../frontend/templates/changepassword.html:23
+msgid "Please enter your new password."
+msgstr ""
+
+#: ../../frontend/templates/changepassword.html:54
+msgid "Change password"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:14
+msgid "Deflected websites"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:19
+#: ../../frontend/templates/dashboard.html:62
+msgid "Notify Deflect about your site being under attack"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:22
+msgid "You have no websites yet."
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:28
+msgid "Add a new website"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:32
+msgid "My account"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:34
+#: ../../frontend/templates/settings.html:5
+msgid "Settings"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:35
+msgid "Logout"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:38
+msgid "Language"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:41
+msgid "Choose language"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:46
+msgid "Help"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:48
+#: ../../frontend/templates/incident.html:7
+msgid "Report an incident"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:49
+#: ../../frontend/templates/support.html:7
+msgid "Support"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:64
+#: ../../frontend/templates/under_attack.html:5
+msgid "My site is under attack"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:66
+msgid "Increased protection requested"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:68
+msgid "Your site has increased protection"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:74
+msgid "stats"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:75
+msgid "DNS records"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:76
+msgid "users"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:77
+msgid "security"
+msgstr ""
+
+#: ../../frontend/templates/dashboard.html:78
+msgid "settings"
+msgstr ""
+
+#: ../../frontend/templates/dashboard_no_websites.html:5
+msgid "Welcome to the Deflect dashboard!"
+msgstr ""
+
+#: ../../frontend/templates/dashboard_no_websites.html:11
+msgid "It appears you have no websites yet. Add one to get started."
+msgstr ""
+
+#: ../../frontend/templates/forgotpassword.html:29
+msgid "Please enter your email"
+msgstr ""
+
+#: ../../frontend/templates/forgotpassword.html:50
+msgid "Reset password"
+msgstr ""
+
+#: ../../frontend/templates/incident.html:17
+msgid "Incident report sent successfully!"
+msgstr ""
+
+#: ../../frontend/templates/incident.html:21
+msgid "There was an error sending your incident report."
+msgstr ""
+
+#: ../../frontend/templates/incident.html:25
+msgid "Back to"
+msgstr ""
+
+#: ../../frontend/templates/incident.html:25
+msgid "dashboard home"
+msgstr ""
+
+#: ../../frontend/templates/incident.html:66
+msgid "Send report"
+msgstr ""
+
+#: ../../frontend/templates/incident.html:67
+msgid "Submitted content will be kept confidential."
+msgstr ""
+
+#: ../../frontend/templates/incident.html:67
+msgid "Privacy policy"
+msgstr ""
+
+#: ../../frontend/templates/security_settings.html:8
+#: ../../frontend/templates/security_settings.html:16
+#: ../../frontend/templates/website_settings.html:8
+msgid "Your settings were saved successfully."
+msgstr ""
+
+#: ../../frontend/templates/security_settings.html:25
+#: ../../frontend/templates/website_settings.html:63
+msgid "Only website owners can modify website credentials."
+msgstr ""
+
+#: ../../frontend/templates/settings.html:15
+msgid "Update your email address"
+msgstr ""
+
+#: ../../frontend/templates/settings.html:47
+msgid "Update your password"
+msgstr ""
+
+#: ../../frontend/templates/settings.html:51
+msgid "Please update your password before setting up your website."
+msgstr ""
+
+#: ../../frontend/templates/settings.html:57
+msgid "Old password"
+msgstr ""
+
+#: ../../frontend/templates/settings.html:67
+msgid "Password updated!"
+msgstr ""
+
+#: ../../frontend/templates/settings.html:70
+msgid "Save new password"
+msgstr ""
+
+#: ../../frontend/templates/signin.html:3
+#: ../../frontend/templates/signin.html:9
+msgid "Signin"
+msgstr ""
+
+#: ../../frontend/templates/signin.html:14
+msgid "Don't have an account?"
+msgstr ""
+
+#: ../../frontend/templates/signin.html:14
+msgid "Signup here"
+msgstr ""
+
+#: ../../frontend/templates/signin.html:40
+msgid "Log in"
+msgstr ""
+
+#: ../../frontend/templates/signin.html:46
+msgid "I forgot my password"
+msgstr ""
+
+#: ../../frontend/templates/signup.html:3
+msgid "Signup"
+msgstr ""
+
+#: ../../frontend/templates/signup.html:9
+msgid "Sign up for Deflect!"
+msgstr ""
+
+#: ../../frontend/templates/signup.html:11
+msgid "Already have an account?"
+msgstr ""
+
+#: ../../frontend/templates/signup.html:11
+#: ../../frontend/templates/signup_confirmation.html:14
+msgid "Log in here"
+msgstr ""
+
+#: ../../frontend/templates/signup.html:15
+msgid "About your site"
+msgstr ""
+
+#: ../../frontend/templates/signup.html:47
+msgid "Sign up!"
+msgstr ""
+
+#: ../../frontend/templates/signup_confirmation.html:9
+msgid "Thanks for signing up!"
+msgstr ""
+
+#: ../../frontend/templates/signup_confirmation.html:13
+msgid "Please check your email. We have sent you a password."
+msgstr ""
+
+#: ../../frontend/templates/signup_confirmation.html:16
+msgid ""
+"If you have not received an email, you can contact us at "
+"outreach@deflect.ca."
+msgstr ""
+
+#: ../../frontend/templates/support.html:17
+msgid "Support request sent successfully!"
+msgstr ""
+
+#: ../../frontend/templates/support.html:21
+msgid "There was an error sending your support ticket."
+msgstr ""
+
+#: ../../frontend/templates/support.html:25
+msgid "Back to dashboard"
+msgstr ""
+
+#: ../../frontend/templates/support.html:51
+msgid "Send"
+msgstr ""
+
+#: ../../frontend/templates/under_attack.html:15
+msgid "Notify Deflect and request increased protection if:"
+msgstr ""
+
+#: ../../frontend/templates/under_attack.html:17
+msgid "Circumstance 1"
+msgstr ""
+
+#: ../../frontend/templates/under_attack.html:18
+msgid "Circumstance 2"
+msgstr ""
+
+#: ../../frontend/templates/under_attack.html:19
+msgid "Circumstance 3"
+msgstr ""
+
+#: ../../frontend/templates/under_attack.html:31
+msgid "Deflect has been notified that your site is under attack."
+msgstr ""
+
+#: ../../frontend/templates/under_attack.html:40
+msgid "Your site now has increased protection."
+msgstr ""
+
+#: ../../frontend/templates/website_add.html:5
+msgid "Add new website"
+msgstr ""
+
+#: ../../frontend/templates/website_add.html:29
+msgid "There was an error adding this url. Please double check it."
+msgstr ""
+
+#: ../../frontend/templates/website_add.html:33
+msgid "Add website"
+msgstr ""
+
+#: ../../frontend/templates/website_dns_records.html:9
+msgid "Current DNS zone file settings."
+msgstr ""
+
+#: ../../frontend/templates/website_dns_records.html:16
+msgid "Only website owners can modify website settings."
+msgstr ""
+
+#: ../../frontend/templates/website_settings.html:15
+msgid "Website IP"
+msgstr ""
+
+#: ../../frontend/templates/website_settings.html:25
+msgid "Visitor logs"
+msgstr ""
+
+#: ../../frontend/templates/website_settings.html:35
+msgid "Cache time"
+msgstr ""
+
+#: ../../frontend/templates/website_settings.html:45
+#: ../../frontend/templates/setup/include/dns_records_edit.html:111
+#: ../../frontend/templates/setup/include/ssl_uploads.html:48
+msgid "Save"
+msgstr ""
+
+#: ../../frontend/templates/website_settings.html:51
+msgid "Delete website"
+msgstr ""
+
+#: ../../frontend/templates/website_settings.html:52
+#: ../../frontend/templates/website_users.html:79
+#: ../../frontend/templates/setup/include/dns_records_edit.html:91
+msgid "Delete"
+msgstr ""
+
+#: ../../frontend/templates/website_settings.html:56
+msgid "I understand, delete website."
+msgstr ""
+
+#: ../../frontend/templates/website_users.html:9
+msgid "Add a new user to this website."
+msgstr ""
+
+#: ../../frontend/templates/website_users.html:12
+msgid ""
+"If this user is new to Deflect, they will receive an email with their new"
+" password."
+msgstr ""
+
+#: ../../frontend/templates/website_users.html:40
+msgid "Add user"
+msgstr ""
+
+#: ../../frontend/templates/website_users.html:58
+msgid "Email"
+msgstr ""
+
+#: ../../frontend/templates/website_users.html:62
+msgid "Role"
+msgstr ""
+
+#: ../../frontend/templates/website_users.html:66
+#: ../../frontend/templates/setup/include/dns_records_edit.html:57
+msgid "Edit"
+msgstr ""
+
+#: ../../frontend/templates/website_users.html:92
+msgid "Only website owners can modify website users."
+msgstr ""
+
+#: ../../frontend/templates/base/base_dashboard.html:13
+msgid "Deflect Dashboard"
+msgstr ""
+
+#: ../../frontend/templates/base/base_signup.html:32
+msgid "a project by"
+msgstr ""
+
+#: ../../frontend/templates/base/base_signup.html:48
+msgid ""
+"Get protected, stay connected. Deflect is a free service for independent "
+"media, human rights organisations and activists."
+msgstr ""
+
+#: ../../frontend/templates/base/base_signup.html:49
+msgid ""
+"Once you sign up, we will set things up on our end and get in touch to "
+"guide you through the necessary steps."
+msgstr ""
+
+#: ../../frontend/templates/base/base_signup.html:67
+msgid ""
+"develops open and reusable systems with a focus on privacy, online "
+"security, and information management. Our goal is to create accessible "
+"technology and improve the skill-set needed for defending human rights "
+"and freedoms in the digital age"
+msgstr ""
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:8
+#: ../../frontend/templates/setup/setup_0.html:8
+msgid "Setup your website"
+msgstr ""
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:16
+msgid "Website deletion was successful"
+msgstr ""
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:16
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:22
+msgid "Go back to dashboard"
+msgstr ""
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:16
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:22
+msgid "or"
+msgstr ""
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:17
+msgid "add another website"
+msgstr ""
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:20
+msgid ""
+"There was an error deleting the website, make sure you are allowed to do "
+"this. If the problem persists, please"
+msgstr ""
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:21
+msgid "let us know"
+msgstr ""
+
+#: ../../frontend/templates/confirmations/confirmation_simple_delete.html:23
+msgid "add another website."
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_0.html:16
+msgid "To set up your website, you need to"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_0.html:19
+msgid "Configure your DNS zone file"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_0.html:20
+msgid "Tell Deflect you are ready to join"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_0.html:21
+msgid "Point your nameservers to Deflect"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_0.html:24
+msgid "Start setup"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_0.html:30
+msgid "I've changed my mind, I want to delete this website"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_0.html:31
+msgid "Delete this website"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_0_5.html:6
+msgid "Ip address"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_0_5.html:26
+msgid "Save IP"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_1.html:6
+msgid "DNS zone file"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_1.html:14
+msgid "Please review and correct the DNS zone file records below."
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_1.html:19
+msgid "Save, my records are OK"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_1.html:20
+msgid "I want to rescan my records"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_1.html:24
+msgid "I understand, rescan my records."
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_2.html:6
+#: ../../frontend/templates/setup/setup_2_5.html:6
+msgid "Security"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_3.html:6
+msgid "Finalizing your configuration"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_3.html:14
+msgid "Deflect needs to validate your final configuration"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_3.html:15
+msgid ""
+"You will be notified via email once this process is done, and this page "
+"will also be updated accordingly"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_3.html:16
+msgid "This process can take up to 24h, but is usually faster"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_3.html:20
+msgid "Point your domains' NS settings to"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_3.html:27
+msgid "Done. NS settings saved"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_3.html:28
+msgid "I'm not sure what this means"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_3.html:33
+msgid "Make sure your website is on Deflect"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_3.html:37
+msgid ""
+"NS propagation under way. This can take up to a few hours. This page will"
+" refresh automatically."
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_3.html:39
+msgid "NS servers are responding correctly."
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_3.html:46
+msgid "Ready to use Deflect!"
+msgstr ""
+
+#: ../../frontend/templates/setup/setup_3.html:50
+msgid "To my dashboard"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/dns_records_edit.html:4
+msgid "Your DNS records are being fetched. This page will refresh automatically"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/dns_records_edit.html:23
+msgid "Deleted record successfully"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/dns_records_edit.html:27
+msgid "Added record successfully"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/dns_records_edit.html:45
+msgid "Type"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/help_footer.html:3
+#: ../../frontend/templates/setup/include/help_footer.html:6
+#: ../../frontend/templates/setup/include/help_footer.html:9
+#: ../../frontend/templates/setup/include/help_footer.html:12
+#: ../../frontend/templates/setup/include/help_footer.html:15
+#: ../../frontend/templates/setup/include/help_footer.html:18
+#: ../../frontend/templates/setup/include/help_footer.html:20
+msgid "Need help?"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/help_footer.html:3
+#: ../../frontend/templates/setup/include/help_footer.html:6
+#: ../../frontend/templates/setup/include/help_footer.html:9
+#: ../../frontend/templates/setup/include/help_footer.html:12
+#: ../../frontend/templates/setup/include/help_footer.html:15
+#: ../../frontend/templates/setup/include/help_footer.html:18
+#: ../../frontend/templates/setup/include/help_footer.html:20
+msgid "Try our Wiki"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/help_footer.html:5
+#: ../../frontend/templates/setup/include/help_footer.html:8
+#: ../../frontend/templates/setup/include/help_footer.html:11
+#: ../../frontend/templates/setup/include/help_footer.html:14
+#: ../../frontend/templates/setup/include/help_footer.html:17
+msgid "Return to previous step"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/security.html:3
+msgid "Website administration credentials"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/security.html:5
+msgid ""
+"To protect your websites' editorial section, Deflect will require "
+"privileged users to"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/security.html:5
+msgid "authenticate themselves"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/security.html:6
+msgid ""
+"Please create a unique password that is not used anywhere else on your "
+"website. You will need to share this password\n"
+"        securely with other website editors. You can change this password"
+" at any time"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/security.html:17
+msgid "The link used for accessing your website's admin section"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/security.html:39
+msgid ""
+"There was an error adding this password. Please double check it to ensure"
+" it matches the following."
+msgstr ""
+
+#: ../../frontend/templates/setup/include/security.html:43
+msgid "Save password and url"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/security.html:47
+msgid "Skip, I don't have an admin section"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/ssl_uploads.html:3
+msgid "SSL configuration"
+msgstr ""
+
+#: ../../frontend/templates/setup/include/ssl_uploads.html:25
+#: ../../frontend/templates/setup/include/ssl_uploads.html:33
+#: ../../frontend/templates/setup/include/ssl_uploads.html:41
+msgid "Last updated"
+msgstr ""
+
+#: ../../frontend/views/signin.py:51
+msgid ""
+"Could not find user. Please check the email and <a "
+"href='/forgotpassword'>try again</a>."
+msgstr ""
+
+#: ../../frontend/views/signin.py:61
+msgid "There was an error sending your email reset link."
+msgstr ""
+
+#: ../../frontend/views/signin.py:64
+msgid "Please check your inbox, we have sent you an email reset link."
+msgstr ""
+
+#: ../../frontend/views/signin.py:85
+msgid ""
+"Could not find reset link. Please double check the link sent to your "
+"email."
+msgstr ""
+
+#: ../../frontend/views/signin.py:105
+msgid "There was an error saving your new password please try again."
+msgstr ""
+
+#: ../../frontend/views/signup.py:40
+msgid "Email already exists."
+msgstr ""
+
+#: ../../frontend/views/support.py:45
+msgid "Choose which website is concerned"
+msgstr ""
+
+#: ../../frontend/views/support.py:49
+msgid "Choose a support type"
+msgstr ""
+
+#: ../../lib/DB.py:342
+msgid "Could not delete the DNS record."
+msgstr ""
+
+#: ../../lib/DB.py:363
+msgid "This record already exists."
+msgstr ""
+
+#: ../../lib/DBService.py:216
+msgid "User has already been added to this website."
+msgstr ""
+
+#: ../../lib/DBService.py:218
+msgid "User added successfully."
+msgstr ""
+
+#: ../../lib/DBService.py:232
+msgid ""
+"User was sent a confirmation email and added to this Deflect website "
+"successfully."
+msgstr ""
+
+#: ../../lib/DBService.py:258
+msgid "Are you sure this is correct? Your CNAME records does not end in a '.'"
+msgstr ""
+
+#: ../../lib/DBService.py:307
+msgid "There was an error retrieving stats, please try again later"
+msgstr ""
+
+#: ../../lib/models/MailSender.py:19
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"\n"
+"Thank you for signing up on Deflect!\n"
+"\n"
+"\n"
+"Your account has been created on the Deflect Dashboard. Please login by "
+"going to https://dashboard.deflect.ca/login and using your email and this"
+" password: %s\n"
+"\n"
+"If you have any questions, please don't hesitate to contact us at "
+"deflect@equalit.ie\n"
+"\n"
+"\n"
+"- The Deflect team\n"
+msgstr ""
+
+#: ../../lib/models/MailSender.py:38
+#, python-format
+msgid ""
+"A new user (%s) has signed up for deflect.\n"
+"\n"
+"- website: %s\n"
+"- IP: %s\n"
+"- pgp key: \n"
+"\n"
+"%s\n"
+"\n"
+"\n"
+"- request headers: \n"
+"\n"
+"%s\n"
+"        "
+msgstr ""
+
+#: ../../lib/models/MailSender.py:44
+msgid "New user signup for Deflect"
+msgstr ""
+
+#: ../../lib/models/MailSender.py:64
+#, python-format
+msgid ""
+"Hi! Deflect needs you to take action in order to complete the setup "
+"process for your website: %s.\n"
+"You need to change your domains' NS to the following:\n"
+"\n"
+"%s\n"
+"\n"
+"Once you are done, go to your dashboard and complete the setup process "
+"here: %s\n"
+"\n"
+"If you have already changed your NS records, please log into the "
+"dashboard and complete your setup process.\n"
+"\n"
+"- The Deflect team\n"
+"                "
+msgstr ""
+
+#: ../../lib/models/MailSender.py:75
+msgid "Deflect website setup: action required on your part."
+msgstr ""
+
+#: ../../lib/models/MailSender.py:90
+#, python-format
+msgid ""
+"Congratulations, you are ready to use Deflect for your website %s!\n"
+"Go to your dashboard %s to manage your settings.\n"
+"\n"
+"- The Deflect team\n"
+"                "
+msgstr ""
+
+#: ../../lib/models/MailSender.py:95
+msgid "Your Deflect website is ready."
+msgstr ""
+
+#: ../../lib/models/MailSender.py:110
+#, python-format
+msgid ""
+"You have requested a link to reset your password. To do so, please go to:"
+"\n"
+"%s\n"
+"\n"
+"- The Deflect team\n"
+"                "
+msgstr ""
+
+#: ../../lib/models/MailSender.py:115
+msgid "Your password reset link."
+msgstr ""
+

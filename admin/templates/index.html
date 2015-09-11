@@ -1,0 +1,98 @@
+{% extends "base/base_admin.html" %}
+
+{% block body %}
+
+        <div class="background_left"></div>
+        <div class="dashboard_left">
+
+            <div class="deflect_logo">
+                <a href="//deflect.ca" target="_blank">
+                    <img src="/static/images/deflect_100.png" />
+                </a>
+            </div>
+
+            <h3 class="deflected_websites">Deflected websites</h3>
+            <ul>
+                <li class="normal"><a href="/manage">Manage websites</a></li>
+                <li class="normal"><a href="/users">Manage users</a></li>
+            </ul>
+
+            <h3 class="my_account">My account</h3>
+            <ul>
+                <li class="normal"><a href="/logout">Logout</a></li>
+            </ul>
+
+        </div>
+
+        <div class="dashboard_right">
+
+
+            <div id="content_header">
+            {% block content_header %}
+
+                    <h2 class="website_url_title">Manage websites</h2>
+
+            {% endblock %}
+            </div>
+
+            <div id="content_main">
+                {% block website_section %}
+
+                    <p>Select a website to see full details</p>
+
+                    {% if websites %}
+
+                    <div class="manage_table index_table">
+
+                        <table class="table table-hover websites_table">
+                            <thead>
+                                <tr>
+                                {% for k, v in websites[0].iteritems() %}
+                                    <th>
+                                        {{ k }}
+                                    </th>
+                                {% endfor %}
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                            {% for website in websites %}
+
+                                <tr onclick="window.location='manage/{{ website['id'] }}'">
+
+                                    {% for k, v in website.iteritems() %}
+
+                                        <td>
+
+                                            {% if k == "status" %}
+
+                                            ({{ v }}) {{ status_strings[v] }}
+
+                                            {% else %}
+
+                                            {{ v }}
+
+                                            {% endif %}
+
+                                        </td>
+                                    {% endfor %}
+
+                                </tr>
+
+                            {% endfor %}
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    {% endif %}
+
+                {% endblock %}
+            </div>
+
+        </div>
+
+        <div class="top"></div>
+
+{% endblock %}

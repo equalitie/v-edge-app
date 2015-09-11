@@ -1,0 +1,51 @@
+<form method="POST" class="" role="form" action="?save=website_credentials">
+
+        <h4>{{ _("Website administration credentials") }}</h4>
+
+        <p>{{ _("To protect your websites' editorial section, Deflect will require privileged users to") }} <a href="https://wiki.deflect.ca/wiki/Deflect/BanjaxAuth">{{ _("authenticate themselves") }}</a>.
+        {{ _("Please create a unique password that is not used anywhere else on your website. You will need to share this password
+        securely with other website editors. You can change this password at any time") }}: </p>
+
+        {{ form.auth_pass(class_="form-control new_website_input", placeholder=form.auth_pass.description.placeholder|safe) }}
+
+        <div class="new_website_errors">
+        {% for e in form.auth_pass.errors %}
+            {{ e }}
+        {% endfor %}
+        </div>
+
+        <p>{{ _("The link used for accessing your website's admin section") }}: <p>
+
+        <div class="security_fields">
+            <div id="security_admin_url">
+                http://{{ current_website.url }}/
+            </div>
+            <div id="security_admin_field">
+                {{ form.admin_key(class_="form-control new_website_input", placeholder=form.admin_key.description.placeholder|safe) }}
+            </div>
+        </div>
+
+
+        {% if form.admin_key.errors %}
+            <div class="new_website_errors">
+            {% for e in form.admin_key.errors %}
+                {{ e }}
+            {% endfor %}
+            </div>
+        {% endif %}
+
+         {% if formerror %}
+            <div class="new_website_errors">
+                {{ _("There was an error adding this password. Please double check it to ensure it matches the following.") }}
+            </div>
+         {% endif %}
+
+         <button class="btn btn-success" type="submit">{{ _("Save password and url") }}</button>
+
+         {% if from_setup %}
+
+            <button class="btn btn-info skip_admin_security" type="button">{{ _("Skip, I don't have an admin section") }}.</button>
+
+         {% endif %}
+
+</form>

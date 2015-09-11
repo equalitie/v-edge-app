@@ -1,0 +1,18 @@
+<h4>Edit Deflect NS records</h4>
+
+<form action="/manage/{{ website['id'] }}/nsinfo" method="POST">
+
+    <textarea name="nsinfo" class="form-control new_nsinfo" rows="3">{{ "adns1.easydns.com.\nadns2.easydns.com." if not website["nsinfo"] else website["nsinfo"] }}</textarea>
+    {% if not website["nsinfo"] %}
+        <button class="btn btn-info" type="submit">Confirm NS info</button>
+    {% else %}
+        <div class="bg-success ns_confirmation_success">Email sent successfully.</div>
+        <div class="bg-danger ns_confirmation_error">There was a problem sending the email. Please check server logs.</div>
+
+        <button class="btn btn-success" type="submit">Save Deflect NS records</button>
+        <img class="loading_ns_changed_email" src="{{ url_for('static', filename='images/loading.gif') }}" />
+        <button type="button" onclick="update_step({{ website['id'] }}, '.ns_settings_changed', 'ns_changed_notification', '.ns_confirmation_success', '.ns_confirmation_error', '.loading_ns_changed_email')" class="btn btn-info ns_settings_changed">
+            Update website status and notify user to update their NS.</button>
+    {% endif %}
+
+</form>

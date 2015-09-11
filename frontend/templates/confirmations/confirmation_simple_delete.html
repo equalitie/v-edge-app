@@ -1,0 +1,27 @@
+{% extends "dashboard.html" %}
+
+    {% block content_header %}
+
+            {{ "<script> var site_id='{0}'</script>".format(hash_id) | safe }}
+
+            <h2 class="server_url_title">
+                {{ _("Setup your server") }}
+            </h2>
+
+    {% endblock %}
+
+    {% block server_section %}
+
+        {% if result %}
+        <p class="bg-success">{{ _("Server deletion was successful") }}. <a class="underline" href="/dashboard">{{ _("Go back to dashboard") }}</a> {{ _("or") }}
+            <a class="underline" href="/server/add">{{ _("add another server") }}.</a> </p>
+        {% else %}
+
+        <p class="bg-danger">{{ _("There was an error deleting the server, make sure you are allowed to do this. If the problem persists, please") }}
+            <a class="underline" href="/dashboard/support">{{ _("let us know") }}</a>.<br><br>
+            <a class="underline" href="/dashboard">{{ _("Go back to dashboard") }}</a> {{ _("or") }}
+            <a class="underline" href="/server/add">{{ _("add another server.") }}</a> </p>
+
+        {% endif %}
+
+    {% endblock %}

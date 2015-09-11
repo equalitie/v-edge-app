@@ -1,0 +1,1 @@
+DASHBOARD_HOST = "http://10.0.1.254"

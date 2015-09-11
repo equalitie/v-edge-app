@@ -1,0 +1,21 @@
+{% extends "dashboard.html" %}
+
+    {% block content_header %}
+
+            <h2 class="website_url_title">
+                {{ _("Security") }}
+            </h2>
+
+    {% endblock %}
+
+    {% block website_section %}
+
+            {% if not fetching %}
+
+                {% include "setup/include/security.html" %}
+
+            {% endif %}
+
+            {% include "setup/include/help_footer.html" %}
+
+    {% endblock %}

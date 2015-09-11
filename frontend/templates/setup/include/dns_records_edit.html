@@ -1,0 +1,120 @@
+{% if fetching %}
+<meta http-equiv="refresh" content="5;">
+<div class="">
+    <img src="/static/images/loading.gif" /> {{ _("Your DNS records are being fetched. This page will refresh automatically") }}.
+</div>
+{% else %}
+
+    {{ "<script>var hash_id='{0}'</script>".format(hash_id) | safe }}
+    {{ "<script>var domain_name='{0}.'</script>".format(current_website.url) | safe }}
+
+
+    {% if error %}<p class="bg-danger">{{ error }}</p> {% endif %}
+    {% for f in form if f.type != 'CSRFTokenField' %}
+        {% if f.errors %}
+            {% for e in f.errors %}
+                <p class="bg-danger">{{ e }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+    {% if request.args["deletion_successful"] %}
+        <p class="bg-success">
+            {{ _("Deleted record successfully") }}
+        </p>
+    {% elif success %}
+        <p class="bg-success">
+            {{ _("Added record successfully") }}
+        </p>
+    {% endif %}
+
+        <p class="record_edit_error">
+
+        </p>
+
+    <form method="POST" action="{% if active_step == 1 %}/dashboard/{{hash_id}}/setup/1{% endif %}">
+        <table class="table table-striped table-hover table-condensed">
+
+            <tr>
+
+                <!--<th class="record_type_use_deflect">-->
+                    <!--{{ _("Use Deflect") }}-->
+                <!--</th>-->
+
+                <th class="record_type_column">
+                    {{ _("Type") }}
+                </th>
+
+                <th style="width:240px;">
+                    {{ _("Name") }}
+                </th>
+
+                <th style="width:320px;">
+                    {{ _("Value") }}
+                </th>
+
+                <th width="80">
+                    {{ _("Edit") }}
+                </th>
+
+            </tr>
+                <tr class="default_protected">
+                    <td>A</td>
+                    <td onmouseover="javascript: $('.warning_auto_protect_1').toggle();" onmouseout="javascript: $('.warning_auto_protect_1').toggle();" class="dns_item_warning">@ <p class="triangle-isosceles warning_auto_protect_1">This record is automatically protected by Deflect.</p></td>
+                    <td>{{ current_website.ip_address }}</td>
+                    <td></td>
+                </tr>
+
+                <tr class="default_protected">
+                    <td>A</td>
+                    <td onmouseover="javascript: $('.warning_auto_protect_2').toggle();" onmouseout="javascript: $('.warning_auto_protect_2').toggle();" class="dns_item_warning">www <p class="triangle-isosceles warning_auto_protect_2">This record is automatically protected by Deflect.</p></td>
+                    <td>{{ current_website.ip_address }}</td>
+                    <td></td>
+                </tr>
+
+                {% for r in records%}
+                <tr>
+                    <!--<td>{{ "<div class='green'>Yes</div>" | safe if r.deflect else "<div class='red'>No</div>" | safe }}</td>-->
+                    <td>{{r.type}}</td>
+                    <td{% if r.warning == 1 %} class='dns_item_warning' onmouseover="javascript: $('.warning'+{{r.id}}).toggle();" onmouseout="javascript: $('.warning'+{{r.id}}).toggle();"{% endif %}>
+                        {% if r.warning == 1 %}
+                            <img src="/static/images/exclamation_o.png">
+                            <p class="triangle-isosceles warning{{r.id}}">{{ r.warning_message }}</p>
+                        {% endif %}
+                        {{r.hostname}}
+                    </td>
+                    <td>
+                        {{r.value}}
+                        {{ "(Priority: %s)" % r.priority if r.type == "MX" or r.type == "SRV"}}
+                        {{ "(Weight: %s)" % r.weight if r.type == "SRV"}}
+                        {{ "(Port: %s)" % r.port if r.type == "SRV"}}
+                    </td>
+                    <td><button data-button='{{r.id}}' type="button" class="delete_bt btn btn-danger btn-xs">{{ _("Delete") }}</button> </td>
+                </tr>
+                {% endfor %}
+
+            <tr>
+                <!--<td>-->
+                    <!--{{ form.record_use_deflect(class_="form-control use_deflect_chooser") }}-->
+                <!--</td>-->
+                <td>
+                    {{ form.record_type(class_="form-control") }}
+                </td>
+                <td>
+                    {{ form.record_name(class_="form-control new_dns_record_name", placeholder=form.record_name.description.placeholder) }}
+                </td>
+                <td>
+                    {{ form.record_value(class_="form-control new_dns_record_value", placeholder=form.record_value.description.placeholder) }}
+                    {{ form.record_priority(class_="form-control priority_field", placeholder=form.record_priority.description.placeholder) }}
+                    {{ form.record_weight(class_="form-control weight_field", placeholder=form.record_weight.description.placeholder) }}
+                    {{ form.record_port(class_="form-control port_field", placeholder=form.record_port.description.placeholder) }}
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-primary btn-sm step1-bt">{{ _("Save") }}</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+{% endif %}

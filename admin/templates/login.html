@@ -1,0 +1,38 @@
+{% extends "base/base_admin.html" %}
+
+{% block body %}
+
+        <div class="admin_login">
+
+            <form method="POST" action="">
+
+                    <div class="form-group" role="form">
+
+                        {{ form.hidden_tag() if form.hidden_tag }}
+
+                        {% for f in form if f.type != 'CSRFTokenField' %}
+
+                            <div class="form-group">
+                                {{ f.label(class_="sr-only") }}
+                                {{ f(class_="form-control", placeholder=f.description.placeholder|safe) }}
+
+                                {% if f.errors %}
+                                <div class="signin_error">
+                                    {% for e in f.errors %}
+                                        {{ e }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+
+                            </div>
+
+                        {% endfor %}
+
+                        <button class="btn btn-success btn-sm" type="submit">Login</button>
+
+                     </div>
+
+                </form>
+        </div>
+
+{% endblock %}

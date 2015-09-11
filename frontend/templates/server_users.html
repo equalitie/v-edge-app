@@ -1,0 +1,96 @@
+{% extends "dashboard.html" %}
+
+    {% block server_section %}
+
+        {% if current_user.role == 0 and current_server["creator_id"] == current_user.id %}
+
+            <div class="settings_section">
+                <h4>
+                    {{ _("Add a new user to this server.") }}
+                </h4>
+
+                <div class="new_user_email_notification">{{ _("If this user is new to Deflect, they will receive an email with their new password.") }}</div>
+
+
+                <form class="form-inline" role="form" method="POST">
+                  <div class="form-group add_user_form_group">
+
+                      <div class="input-group">
+
+                        <div class="input-group-addon">@</div>
+
+                        {{ form.email.label(class_="sr-only", for="email_address") }}
+                        {{ form.email(class_="form-control", id="email_address", placeholder=form.email.description.placeholder|safe) }}
+
+                    </div>
+
+                  </div>
+
+                     <div class="form-group add_user_form_group">
+
+                      <div class="input-group">
+
+                        {{ form.role(class_="form-control form-inline") }}
+
+                    </div>
+
+                  </div>
+
+
+                  <button type="submit" class="btn btn-success">{{ _("Add user") }}</button>
+                </form>
+
+                <div class="field_errors">{% for e in form.email.errors %}{{ e }}{% endfor %}</div>
+                {% if result %}
+                <div class="add_user_result {{ 'add_user_success' if result[0] else 'add_user_failure' }}">
+                    {{ result[1]  }}
+                </div>
+                {% endif %}
+
+
+            </div>
+
+        <h4>Current users</h4>
+
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    {{ _("Email") }}
+                </th>
+
+                <th>
+                    {{ _("Role") }}
+                </th>
+
+                <th>
+                    {{ _("Edit") }}
+                </th>
+            </tr>
+            {% for user in users%}
+            <tr>
+                <td>
+                    {{ user['email'] }}
+                </td>
+                <td>
+                    {{ "Administrator" if user['role'] == 0 else "Collaborator" }}
+                </td>
+                <td>
+                    {% if user["user_id"] != current_user.id %}
+                    <button class="delete_user btn btn-danger btn-xs" data-button="{{user['user_id']}}">{{ _("Delete") }}</button>
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+     {% else %}
+
+        {{ _("Only server owners can modify server users.") }}
+
+    {% endif %}
+
+    {% endblock %}

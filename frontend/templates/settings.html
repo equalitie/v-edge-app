@@ -1,0 +1,78 @@
+{% extends "dashboard.html" %}
+
+    {% block content_header %}
+
+            <h2 class="server_name_title">{{ _("Settings") }}</h2>
+
+    {% endblock %}
+
+    {% block server_section %}
+
+        <div class="settings_block">
+
+            <form method="POST" class="form-inline" name="new_email" action="/settings/email">
+
+                <h4>{{ _("Update your email address") }}</h4>
+
+                <div class="form-group {{ 'has-success' if result == 1 }} has-feedback">
+
+                    {{ email_form.new_email(class_="form-control") }}
+                    {% if result == 1 %} <span class="glyphicon glyphicon-ok form-control-feedback"></span> {% endif %}
+                    {% if result == None %} <span class="glyphicon glyphicon-remove form-control-feedback"></span> {% endif %}
+
+                    <div class="settings_errors">
+                        {% for e in email_form.new_email.errors %}
+                            {{ e }}
+                        {% endfor %}
+
+                        {% if message != None %}
+                            {{ message }}
+                        {% endif %}
+
+                    </div>
+
+                    <div class="save_email_new"><input type="submit" name="btn" value="Save email address" class="btn btn-success"></div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div class="settings_block">
+
+            <form method="POST" class="form-inline" name="new_password" action="/settings/password">
+
+                <h4>{{ _("Update your password") }}</h4>
+
+                {% if not user.password_reset %}
+
+                    <div class="bg-danger update_password_please">{{ _("Please update your password before setting up your website.") }}</div>
+
+                {% endif %}
+
+                <div class="form-group {{ 'has-success' if result == 2 }} has-feedback">
+
+                    <div class="password_field">{{ password_form.old_password(class_="form-control") }} {{ _("Old password") }}</div>
+                    <div class="settings_errors">{% for e in password_form.old_password.errors %}{{ e }}{% endfor %}</div>
+
+                    <div class="password_field">{{ password_form.new_password_1(class_="form-control") }} {{ _("New password") }}</div>
+                    <div class="settings_errors">{% for e in password_form.new_password_1.errors %}{{ e }}{% endfor %}</div>
+
+                    <div class="password_field">{{ password_form.new_password_2(class_="form-control") }} {{ _("New password (repeat)") }}</div>
+                    <div class="settings_errors">{% for e in password_form.new_password_2.errors %}{{ e }}{% endfor %}</div>
+
+                    {% if result == 2 %}
+                        <span class="password_updated">{{ _("Password updated!") }}</span>
+                    {% endif %}
+
+                    <div class="save_email_new"><input type="submit" name="btn" value='{{ _("Save new password") }}' class="btn btn-success"></div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    {% endblock %}

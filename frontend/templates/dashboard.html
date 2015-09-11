@@ -1,0 +1,85 @@
+{% extends "base/base_dashboard.html" %}
+
+    {% block body %}
+
+        <div class="background_left"></div>
+        <div class="dashboard_left">
+
+            <div class="deflect_logo">
+                <a href="//deflect.ca">
+                    <img src="/static/images/deflect_100.png" />
+                </a>
+            </div>
+
+            <h3 class="deflected_websites">{{ _("Distributed Deflect Volunteer Edges") }}</h3>
+            <ul>
+                {% if servers %}
+                    {% for s in servers %}
+                        <li><a href="/dashboard/{{ s.hex_hash() }}" class="{{ 'active_server' if hash_id == s.hex_hash()}} {{ 'server_ok' if s.status == -1 else 'server_warning' }}">{{ s.name }}</a></li>
+                        
+                    {% endfor %}
+                {% else %}
+                        <div class="no_servers">{{ _("You have no servers yet.") }}</div>
+                {% endif %}
+            </ul>
+
+            <div class="add_new_server">
+                <div class="add_server">
+                    <a href="/server/add">{{ _("Add a new server") }}</a>
+                </div>
+            </div>
+
+            <h3 class="my_account">{{ _("My account") }}</h3>
+            <ul>
+                <li class="normal"><a href="/settings/all">{{ _("Settings") }}</a></li>
+                <li class="normal"><a href="/logout">{{ _("Logout") }}</a></li>
+            </ul>
+
+            <h3 class="choose_language">{{ _("Language") }}</h3>
+
+            <select class="form-control language_chooser">
+                <option value="0">{{ _("Choose language") }}</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="ru">русский</option>
+            </select>
+
+            <h3 class="help">{{ _("Help") }}</h3>
+            <ul>
+                <li class="normal"><a href="/dashboard/incident">{{ _("Report an incident") }}</a></li>
+                <li class="normal"><a href="/dashboard/support">{{ _("Support") }}</a></li>
+            </ul>
+
+        </div>
+
+        <div class="dashboard_right">
+
+
+            <div id="content_header">
+            {% block content_header %}
+
+                    <div class="top_dashboard_container">
+                        <div class="server_name_title_container"><h2 class="server_name_title">{{ current_server.name }}</h2></div>
+                        
+
+                    <div class="server_menu">
+                        <a href="/dashboard/{{ hash_id }}/stats" class="stats_tab {{ 'active' if section == 'stats' }} tab">{{ _("stats") }}</a>
+                        <a href="/dashboard/{{ hash_id }}/users" class="users_tab {{ 'active' if section == 'users' }} tab">{{ _("users") }}</a>
+                        <a href="/dashboard/{{ hash_id }}/security" class="security_tab {{ 'active' if section == 'security' }} tab">{{ _("security") }}</a>
+                        <a href="/dashboard/{{ hash_id }}/settings" class="settings_tab {{ 'active' if section == 'settings' }} tab">{{ _("settings") }}</a>
+                    </div>
+
+            {% endblock %}
+            </div>
+
+            <div id="content_main">
+                {% block server_section %}
+
+                {% endblock %}
+            </div>
+
+        </div>
+
+        <div class="top"></div>
+
+    {% endblock %}

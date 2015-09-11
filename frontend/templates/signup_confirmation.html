@@ -1,0 +1,22 @@
+{% extends "base/base_signup.html" %}
+
+{% block title %} Signup {% endblock %}
+
+{% block content %}
+
+        <div id="right_side">
+
+            <h1>{{ _("Thanks for signing up!") }}</h1>
+
+           <div class="signup_box">
+
+                {{ _("Please check your email. We have sent you a password.") }}
+               <a href="/login">{{ _("Log in here") }}</a>
+
+                {{ _("If you have not received an email, you can contact us at outreach@deflect.ca.") }}
+
+
+            </div>
+        </div>
+
+{% endblock %}

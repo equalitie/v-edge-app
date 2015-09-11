@@ -1,0 +1,37 @@
+{% extends "dashboard.html" %}
+
+    {% block content_header %}
+
+            {{ "<script> var site_id='{0}'</script>".format(hash_id) | safe }}
+
+            <h2 class="server_name_title">
+                {{ _("Setup your server") }}
+            </h2>
+
+    {% endblock %}
+
+    {% block server_section %}
+
+        <div id="setup_summary">
+            <h4>{{ _("To set up your server, you need to") }} :</h4>
+
+                <ol>
+                    <li>{{ _("Configure your DNS zone file") }}</li>
+                    <li>{{ _("Tell Deflect you are ready to join") }}</li>
+                    <li>{{ _("Point your nameservers to Deflect") }}</li>
+                </ol>
+
+            <button type="button" class="btn btn-primary btn-lg start_setup_bt" onclick="window.location='0.5'">{{ _("Start setup") }}</button>
+
+        </div>
+
+        <div class="delete_server_simple">
+
+            <h4>{{ _("I've changed my mind, I want to delete this server") }}</h4>
+            <button type="button" class="btn btn-danger btn-sm confirm_delete_simple">{{ _("Delete this server") }}</button>
+
+        </div>
+
+        {% include "setup/include/help_footer.html" %}
+
+    {% endblock %}

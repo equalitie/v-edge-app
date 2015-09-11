@@ -1,0 +1,50 @@
+<form method="POST" class="" role="form" enctype="multipart/form-data" action="?save=ssl_files">
+
+            <h4>{{ _("SSL configuration") }} </h4>
+
+            <div class="new_website_errors">
+                {% for e in ssl_form.ssl_checkbox.errors %}
+                    <p>{{ e }}</p>
+                {% endfor %}
+
+                {% for e in ssl_form.certificate_file.errors %}
+                    <p>{{ e }}</p>
+                {% endfor %}
+
+                {% for e in ssl_form.key_file.errors %}
+                    <p>{{ e }}</p>
+                {% endfor %}
+            </div>
+
+            {{ ssl_form.ssl_checkbox }} {{ ssl_form.ssl_checkbox.label(class_="save_visitor_logs") }}
+
+            <div class="ssl_files" style="{% if not ssl_form.ssl_checkbox.data %}display:none;{% endif %}">
+
+                <div class="ssl_file_wrapper">
+                    <div class="ssl_file_label">{{ _("Certificate file") }}:</div>
+                    <div class="ssl_last_updated">{{ _("Last updated") }}: {{ "Never" if not current_website.ssl_certificate_file_upload_date else  "{} UTC".format(current_website.ssl_certificate_file_upload_date) }}</div>
+                    <div class="ssl_file_field">
+                        <span class="btn btn-default btn-file">{{ ssl_form.certificate_file }}</span>
+                    </div>
+                </div>
+
+                <div class="ssl_file_wrapper">
+                    <div class="ssl_file_label">{{ _("Key file") }}:</div>
+                    <div class="ssl_last_updated">{{ _("Last updated") }}:  {{ "Never" if not current_website.ssl_key_file_upload_date else  "{} UTC".format(current_website.ssl_key_file_upload_date) }}</div>
+                    <div class="ssl_file_field">
+                        <span class="btn btn-default btn-file">{{ ssl_form.key_file }}</span>
+                    </div>
+                </div>
+
+                <div class="ssl_file_wrapper">
+                    <div class="ssl_file_label">{{ _("Chain file") }}:</div>
+                    <div class="ssl_last_updated">{{ _("Last updated") }}: {{ "Never" if not current_website.ssl_chain_file_upload_date else  "{} UTC".format(current_website.ssl_chain_file_upload_date) }}</div>
+                    <div class="ssl_file_field">
+                        <span class="btn btn-default btn-file">{{ ssl_form.chain_file }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="save_ssl_files"><button class="btn btn-success" type="submit">{{ _("Save") }}</button></p>
+
+</form>

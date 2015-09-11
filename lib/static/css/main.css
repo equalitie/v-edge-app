@@ -1,0 +1,282 @@
+body{
+    background:#EDEDE3;
+}
+header{
+    height: 40px;
+    background: #948C7C;
+    padding: 7px 0;
+    color: #FFF;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    font-variant: small-caps;
+    border-bottom: 4px solid #BCB5AB;
+}
+footer{
+    position:fixed;
+    bottom:0px;
+    width:100%;
+    background: #f6f6f1;
+    height:80px;
+}
+#signup_container{
+    width: 1240px;
+    min-height: 675px;
+    margin: 0 auto;
+    position: relative
+}
+#signup_container #left_side{
+    float: left;
+    padding: 0 30px;
+    margin-top: 20px;
+}
+#signup_container #right_side{
+    float: left;
+    padding: 0 30px 0 40px;
+    margin-top: 30px;
+    width: 690px;
+    text-align: justify;
+    right: 0;
+}
+.deflect_img{
+    background-image: url('../images/deflect.png');
+    background-position: center;
+    background-size: 80% auto;
+    background-repeat: no-repeat;
+    background-color: #E72D34;
+    width: 400px;
+    height: 300px;
+    margin: 10px auto 20px auto;
+    border-radius: 30px
+}
+.blue_box{
+    background: rgba(3, 71, 127, 0.8);
+    width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+}
+.signup_box, .signin_box{
+    margin: 20px 0 150px 0;
+    padding: 20px 15px 23px 15px;
+    background: rgba(148, 140, 125, 0.1);
+    border-radius: 2px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 600px;
+    float:left;
+}
+#right_side h1{
+    color: #e4303a;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Montserrat Alternates';
+    font-weight: bold;
+    margin: 0;
+    font-size: 34px;
+}
+#right_side .signup_box h2{
+    margin: 0px 0 25px 0;
+    color: rgba(55, 105, 145, 1);
+    font-weight: bold;
+    font-size: 26px;
+}
+footer{
+    width: 100%;
+    background: #f6f6f1;
+    border-top: 3px solid #e4303a;
+    position: fixed;
+    bottom: 0;
+    padding: 10px 0;
+}
+footer img{
+    width:50px;
+}
+footer .left{
+    float:left;
+    width:50px;
+    margin: 0 0 0 30px;
+}
+footer .right{
+    padding:5px 30px;
+    float:right;
+    text-align:right;
+    width:1000px;
+    font-size:14px;
+}
+a{
+    color: #e4303a;
+    border-radius: 2px
+}
+header .left{
+    word-spacing: 7px;
+    margin-left:22px;
+    float:left;
+}
+header .right{
+    position: absolute;
+    right: 10px;
+}
+header a, header a:hover{
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 1px 4px;
+    color: #e4303a;
+    border-radius: 2px;
+    color: #ffffff;
+}
+header a:hover{
+    background: rgba(255, 255, 255, 0.30);
+}
+.input_wrapper_div{
+    width: 400px;
+    margin-left:0px;
+    padding-left:0px;
+}
+.signup_label{
+    width:150px;
+}
+.form-horizontal .control-label{
+    text-align:left;
+    padding-right:0px;
+}
+.form-group input#pgp_checkbox{
+    text-align:left;
+    width:15px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+}
+.form_group_pgp_key{
+    display:none;
+}
+.signup_bt{
+    border: none;
+    background: rgba(228, 48, 58, 1);
+    width: 380px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    position: static;
+    box-shadow: 4px 4px rgba(228, 48, 58, 0.6);
+    margin-left:140px;
+}
+.password_reset_bt{
+    font-size: 14px;
+    width: 180px;
+    height: 40px;
+    margin-left: 0px;
+}
+.login_bt{
+    border: none;
+    background: rgba(228, 48, 58, 1);
+    height: 30px;
+    margin: 0 auto;
+    text-align: center;
+    color: #FFF;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 4px 4px rgba(228, 48, 58, 0.6);
+}
+.already_have_account{
+    margin-top:20px;
+}
+.form-group ul{
+    display:block;
+}
+.signup_error, .signin_error{
+    display: inline-block;
+    color: #e4303a;
+    margin-left: 152px;
+    margin-top:5px;
+    font-size:12px;
+}
+.signup_error_forgot_pass{
+    color: #e4303a;
+    margin-left: 0px;
+    margin-top:5px;
+    margin-bottom: 15px;
+    font-size:12px;
+}
+.signin_error{
+    margin-left:10px;
+}
+.dont_have_account{
+    margin:10px 0 20px 0;
+}
+h3.confirmation_title{
+    margin:30px 0;
+}
+.signup_backend_error{
+    color: #e4303a;
+    margin-bottom: 20px;
+    margin-left:140px;
+    font-weight:bold;
+}
+.bg-warning{
+    padding: 15px;
+}
+.deflect-todo{
+    margin-top: 15px;
+}
+#content #signup_container #right_side  .signin_box .forgot_pass{
+    margin-top: 30px;
+    font-size: 13px;
+}
+.forgot_pass_field{
+    margin-left: 15px;
+}
+.update_password_please{
+    margin: 15px 0 15px 0;
+}
+.settings_section_small form h4{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.configure_cache_time{
+    font-weight: normal;
+}
+.domain_name_ok{
+    color: green;
+    margin-left: -50px;
+    top: 9px;
+    display: none;
+}
+.domain_name_x{
+    color: #E67010;
+    margin-left: -50px;
+    top: 9px;
+    display: none;
+}
+.domain_name_error{
+    color:#E67010;
+    display: none;
+}
+.domain_name_ok-add{
+    float:right;
+    color: green;
+    margin-left: -150px;
+    left: -20px;
+    top: 9px;
+    display: none;
+}
+.domain_name_x-add{
+    float:right;
+    color: #E67010;
+    margin-left: -150px;
+    left: -20px;
+    top: 9px;
+    display: none;
+}
+.domain_name_error-add{
+    color:#E67010;
+    display: none;
+    margin-bottom: 10px;
+}

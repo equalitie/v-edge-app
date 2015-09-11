@@ -1,0 +1,72 @@
+{% extends "dashboard.html" %}
+
+    {% block server_section %}
+
+        {% if current_user.role == 0 %}
+
+            {% if success %}
+            <div class="bg-success">{{ _("Your settings were saved successfully.") }}</div>
+            {% endif %}
+
+
+            <div class="settings_section_small">
+                <form method="POST" class="" role="form">
+
+                        <h4>{{ _("Server IP") }}</h4>
+
+                        {{ form.ip_address(class_="form-control ip_address_field new_server_input", placeholder=form.ip_address.description.placeholder) }}
+
+                        <div class="new_server_errors">
+                        {% for e in form.ip_address.errors %}
+                            {{ e }}
+                        {% endfor %}
+                        </div>
+
+                        <h4>{{ _("Cache time") }}</h4>
+
+                        {{ form.cache_time.label(class_="configure_cache_time") }} {{ form.cache_time }}
+
+                        <div class="new_server_errors">
+                        {% for e in form.cache_time.errors %}
+                            {{ e }}
+                        {% endfor %}
+                        </div>
+
+                        <button class="btn btn-success" type="submit">{{ _("Save") }}</button>
+
+                </form>
+            </div>
+
+            <div class="purge_server_cache">
+                <h4>{{ _("Purge server cache") }}</h4>
+               <input type="button" class="purge_server_cache_bt btn btn-warning" value="{{ _('Purge') }}">
+
+                <div class="purge_confirm_ok">
+                    <i class="glyphicon glyphicon-ok"></i> {{ _("Cache successfully purged") }}
+                </div>
+
+                <div class="purge_confirm_x">
+                    <i class="glyphicon glyphicon-remove"></i> {{ _("There was an error purging the cache") }}
+                </div>
+
+            </div>
+
+
+            <div class="delete_server_settings">
+                <h4>{{ _("Delete server") }}</h4>
+               <input type="button" class="delete_button_settings_bt btn btn-danger" value="{{ _('Delete') }}">
+
+                <div class="delete_warning_box">
+                    <h4>Warning! This will delete your server and all associated data. You cannot undo this operation.</h4>
+                    <button type="button" onclick="document.location='/dashboard/{{ hash_id }}/setup/delete'" class="btn btn-danger delete-server-confirmation">{{ _("I understand, delete server.") }}</button>
+                </div>
+
+            </div>
+
+        {% else %}
+
+            <p>{{ _("Only server owners can modify server credentials.") }}</p>
+
+        {% endif %}
+
+    {% endblock %}

@@ -1,0 +1,13 @@
+<h4>Check current NS records</h4>
+<div class="scan_in_progress"><img src="{{ url_for('static', filename='images/loading.gif') }}" /> Scanning in progress...</div>
+
+<div class="scan_result">
+
+</div>
+
+<div class="bg-success website_ready_success">Email sent successfully.</div>
+<div class="bg-danger website_ready_error">There was a problem sending the email. Please check server logs.</div>
+
+<button data-websiteid="{{ website['id'] }}" class="btn btn-success start_scan">Start current NS records scan</button>
+<img class="loading_website_ready" src="{{ url_for('static', filename='images/loading.gif') }}" />
+<button onclick="update_step({{ website['id'] }}, '.confirm_NS_ok', 'website_ready', '.website_ready_success', '.website_ready_error', '.loading_website_ready')" class="confirm_NS_ok btn btn-info">Update website status to use Deflect and notify user they are finished.</button>

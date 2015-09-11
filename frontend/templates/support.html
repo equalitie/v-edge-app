@@ -1,0 +1,57 @@
+{% extends "dashboard.html" %}
+
+
+
+    {% block content_header %}
+
+            <h2 class="website_url_title">{{ _("Support") }}</h2>
+
+    {% endblock %}
+
+    {% block website_section %}
+
+                {% if request.args["send_successful"] %}
+
+                    {% if request.args["send_successful"] == "1" %}
+                    <div class="bg-success">
+                        {{ _("Support request sent successfully!") }}
+                    </div>
+                    {% else %}
+                    <div class="bg-danger">
+                        {{ _("There was an error sending your support ticket.") }}
+                    </div>
+                    {% endif %}
+                    <br /><br />
+                    <button type="button" onclick="window.location='/dashboard'" class="btn btn-success btn">{{ _("Back to dashboard") }}</button>
+
+                {% else %}
+
+                    <form role="form" class="support_form" method="POST">
+                      <div class="form-group">
+                       {{ form.support_type(class_="form-control")}}
+                       <div class="signin_error">
+                           {% for e in form.support_type.errors %} {{ e }} {% endfor %}
+                       </div>
+                      </div>
+
+                      <div class="form-group">
+                       {{ form.website_concerned(class_="form-control")}}
+                          <div class="signin_error">
+                           {% for e in form.website_concerned.errors %} {{ e }} {% endfor %}
+                       </div>
+                      </div>
+
+                      <div class="form-group">
+                       {{ form.comment(class_="form-control", placeholder=_("Comment")) }}
+                          <div class="signin_error">
+                           {% for e in form.comment.errors %} {{ e }} {% endfor %}
+                       </div>
+                      </div>
+
+                      <button type="submit" class="btn btn-success">{{ _("Send") }}</button>
+
+                    </form>
+
+                {% endif %}
+
+    {% endblock %}

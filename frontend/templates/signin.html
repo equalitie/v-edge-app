@@ -1,0 +1,52 @@
+{% extends "base/base_signup.html" %}
+
+{% block title %} {{ _("Signin") }} {% endblock %}
+
+{% block content %}
+
+        <div id="right_side">
+
+            <h1>{{ _("Signin") }}</h1>
+
+            <div class="signin_box">
+
+
+                <div class="dont_have_account">{{ _("Don't have an account?") }} <a href="/signup">{{ _("Signup here") }}</a>.</div>
+
+                <form method="POST" action="">
+
+                    <div class="form-group" role="form">
+
+                        {{ form.hidden_tag() if form.hidden_tag }}
+
+                        {% for f in form if f.type != 'CSRFTokenField' %}
+
+                            <div class="form-group">
+                                {{ f.label(class_="sr-only") }}
+                                {{ f(class_="form-control", placeholder=f.description.placeholder|safe) }}
+
+                                {% if f.errors %}
+                                <div class="signin_error">
+                                    {% for e in f.errors %}
+                                        {{ e }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+
+                            </div>
+
+                        {% endfor %}
+
+                        <button class="btn login_bt" type="submit">{{ _("Log in") }}</button>
+
+                     </div>
+
+                </form>
+
+                <div class="forgot_pass"><a href="/forgotpassword">{{ _("I forgot my password") }}</a></div>
+
+            </div>
+
+        </div>
+
+{% endblock %}

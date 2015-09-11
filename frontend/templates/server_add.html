@@ -1,0 +1,42 @@
+{% extends "dashboard.html" %}
+
+    {% block content_header %}
+
+            <h2 class="server_name_title">{{ _("Add new server") }}</h2>
+
+    {% endblock %}
+
+    {% block server_section %}
+
+         <form method="POST" class="" role="form">
+
+             <span class="domain_name_ok-add glyphicon glyphicon-ok form-control-feedback"></span>
+             <span class="domain_name_x-add glyphicon glyphicon-warning-sign form-control-feedback"></span>
+
+
+            {{ form.url(class_="form-control new_server_input", placeholder=form.url.description.placeholder|safe) }}
+
+             <div class="domain_name_error-add"></div><br />
+
+             {% if form.name.errors %}
+
+                <div class="new_server_errors">
+                    {% for e in form.name.errors %}
+                        {{ e }}
+                    {% endfor %}
+                </div>
+
+            {% endif %}
+
+
+             {% if urlerror %}
+                <div class="new_server_errors">
+                    {{ _("There was an error adding this server name. Please double check it.") }}
+                </div>
+             {% endif %}
+
+           <button class="btn btn-success" type="submit">{{ _("Add server") }}</button>
+
+        </form>
+
+    {% endblock %}

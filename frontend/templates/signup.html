@@ -1,0 +1,61 @@
+{% extends "base/base_signup.html" %}
+
+{% block title %} {{ _('Signup') }} {% endblock %}
+
+{% block content %}
+
+        <div id="right_side">
+
+            <h1>{{ _('Sign up for Deflect!') }}</h1>
+
+            <div class="already_have_account">{{ _('Already have an account?') }} <a href="/login">{{ _('Log in here') }}</a></div>
+
+           <div class="signup_box">
+
+               <h2>{{ _('About your site') }}</h2>
+
+                <form method="POST" action="" class="form-horizontal" role="form">
+
+                        {% if error %}
+                            <div class="signup_backend_error">{{ error }}</div>
+                        {% endif %}
+
+                        {{ form.hidden_tag() if form.hidden_tag }}
+
+                        {% for f in form if f.type != 'CSRFTokenField' %}
+
+                            <div class="form-group form_group_{{ f.id }}">
+
+                                {{ f.label(class_="col-sm-2 control-label signup_label") }}
+
+                                <div class="col-sm-10 input_wrapper_div">
+                                    {{ f(class_="form-control", placeholder=f.description.placeholder|safe) }}
+                                </div>
+
+                                {% if f.id == "domain_name" %}
+                                    <span class="domain_name_ok glyphicon glyphicon-ok form-control-feedback"></span>
+                                    <span class="domain_name_x glyphicon glyphicon-warning-sign form-control-feedback"></span>
+
+                                    <div class="signup_error domain_name_error"></div>
+                                {% endif %}
+
+                                {% if f.errors %}
+                                <div class="signup_error">
+                                    {% for e in f.errors %}
+                                        {{ e }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+
+                            </div>
+
+                        {% endfor %}
+
+                        <button class="btn signup_bt" type="submit">{{ _('Sign up!') }}</button>
+
+                </form>
+
+            </div>
+        </div>
+
+{% endblock %}

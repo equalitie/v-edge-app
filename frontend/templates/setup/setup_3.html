@@ -1,0 +1,58 @@
+{% extends "dashboard.html" %}
+
+    {% block content_header %}
+            {% if website.status == 5 or website.status == 3 %} <meta http-equiv="refresh" content="5; URL=3"> {% endif %}
+            <h2 class="website_url_title">
+                {{ _("Finalizing your configuration") }}
+            </h2>
+
+    {% endblock %}
+
+    {% block website_section %}
+
+            <div class="setup_step {{ 'notdone' if website.status < 4 else 'done' }}">
+                <h4>{{ _("Deflect needs to validate your final configuration") }}</h4>
+                <p>{{ _("You will be notified via email once this process is done, and this page will also be updated accordingly") }}.</p>
+                <p>{{ _("This process can take up to 24h, but is usually faster") }}.</p>
+            </div>
+
+            <div class="setup_step {{ 'notreadyyet' if website.status < 4 }} {{ 'notdone' if website.status < 5 else 'done' }}">
+                <h4>{{ _("Point your domains' NS settings to") }}: </h4>
+                <div class="{{ 'setup_last' if website.status < 4 }}">
+                    <ul class="nsinfo_list">
+                        {% for record in website.nsinfo.split("\n") %}
+                            <li>{{ record }}</li>
+                        {% endfor %}
+                    </ul>
+                    <button class="btn btn-info confirm_ns_moved">{{ _("Done. NS settings saved") }}.</button>
+                    <button class="btn btn-warning help_with_ns">{{ _("I'm not sure what this means") }}.</button>
+                </div>
+            </div>
+
+            <div class="setup_step {{ 'notreadyyet' if website.status < 5 }} {{ 'notdone' if website.status < 6 else 'done' }}">
+                <h4>{{ _("Make sure your website is on Deflect") }}</h4>
+                <div class="{{ 'setup_last' if website.status < 5 }}">
+                    <p>
+                        {% if website.status < 6 %}
+                        <img src="/static/images/loading.gif" /> {{ _("NS propagation under way. This can take up to a few hours. This page will refresh automatically.") }}
+                        {% else %}
+                        {{ _("NS servers are responding correctly.") }}
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="setup_step {{ 'notreadyyet' if website.status != -1 }} {{ 'notdone' if website.status != -1 else 'done' }}">
+                <h4>{{ _("Ready to use Deflect!") }}</h4>
+                <div class="{{ 'setup_last' if website.status < 6 }}">
+                    <div class="to_dashboard">
+                        <button type="button" onclick="window.location='/dashboard/{{ hash_id }}'" class="all_done btn btn-success btn-lg">
+                            {{ _("To my dashboard") }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {% include "setup/include/help_footer.html" %}
+
+    {% endblock %}

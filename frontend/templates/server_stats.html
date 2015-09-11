@@ -1,0 +1,31 @@
+{% extends "dashboard.html" %}
+
+    {% block server_section %}
+
+        <style>
+        td{
+            border-color:#F2F2F2 !important;
+        }
+        table, tr, tbody{
+            border:none !important;
+            border-color:#F2F2F2 !important;
+        }
+        .aws_title{
+            font-size:25px;
+        }
+        form{
+            display:none;
+        }
+        </style>
+
+        <div id="wrapper">
+            <!--
+            <p>
+                <button class="btn btn-info btn-lg" onclick="window.open('https://opsdash.deflect.ca/#/dashboard/elasticsearch/vitaliev', '_blank');">See live stats</button>
+            <p>
+            -->
+
+            {{ data | safe }}
+        </div>
+
+    {% endblock %}

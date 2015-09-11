@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}" />
+        <script src="{{ url_for('static', filename='js/jquery1.1.1.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="robots" content="nofollow" />
+        <title>{% block title %}{% endblock %} {{ _("Distributed Deflect V Edge Dashboard") }}</title>
+    {% endblock %}
+    </head>
+
+    <body>
+    {% block body %}
+
+    {% endblock %}
+    </body>
+
+</html>

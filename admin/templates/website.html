@@ -1,0 +1,232 @@
+{% extends "base/base_admin.html" %}
+
+{% block body %}
+
+        <div class="background_left"></div>
+        <div class="dashboard_left">
+
+            <div class="deflect_logo">
+                <a href="//deflect.ca" target="_blank">
+                    <img src="/static/images/deflect_100.png" />
+                </a>
+            </div>
+
+            <h3 class="deflected_websites">Deflected websites</h3>
+            <ul>
+                <li class="normal"><a href="/manage">Manage websites</a></li>
+                <li class="normal"><a href="/users">Manage users</a></li>
+            </ul>
+
+            <h3 class="my_account">My account</h3>
+            <ul>
+                <li class="normal"><a href="/logout">Logout</a></li>
+            </ul>
+
+        </div>
+
+        <div class="dashboard_right">
+
+
+            <div id="content_header">
+            {% block content_header %}
+
+                    <h2 class="website_url_title">{{ website["url"] }}</h2>
+
+            {% endblock %}
+            </div>
+
+            <div id="content_main">
+                {% block website_section %}
+
+
+                    {% if website %}
+
+                        {% if request.args.get('save') == '1' %}
+                            <div class="bg-success"><strong>DNS records saved successfully!</strong></div>
+                        {% endif %}
+
+                        {% if website['status'] == 3 %}
+
+                            <div class="bg-warning"><strong>Warning! This website is waiting for Deflect to:</strong>
+                                <ul class="deflect-todo">
+                                    <li>review the settings</li>
+                                    <li>setup website within Deflect</li>
+                                </ul>
+
+                            <hr />
+                                <div class="bg-success ticket_created_dns"><strong>Your ticket has been created successfully.</strong></div>
+                                <p class="create_ticket_p">If the above is completed, <a data-websiteid="{{ website['id'] }}" class="create_dns_ticket_request" href="javascript: void(0); ">create a new ticket to request DNS hosting.</a></p>
+
+                            <hr />
+                                <ul>
+                                <li>set NS values (below)</li>
+                                    <li>Click the "Update website status and notify user to update their NS." button when all is done. This sends the owner an email
+                                to continue with setup.</li>
+                                </ul>
+
+                            </div>
+
+                            {% include "include/edit_ns.html" %}
+
+                        {% endif %}
+
+                        {% if website["status"] == 5 %}
+                            <div class="bg-warning"><strong>Warning! This website is waiting for Deflect to:</strong>
+                                <ul class="deflect-todo">
+                                    <li>check the current NS records</li>
+                                    <li>confirm that all is setup properly if matches are found</li>
+                                    <li>Click the "Update website status to use Deflect..." button. This will send an email to the
+                                    user confirming the end of setup for their website.</li>
+                                </ul>
+                            </div>
+                            {% include "include/scan_confirm_ns.html" %}
+
+                        {% endif %}
+
+                        <div class="manage_table">
+
+                            <h4>General info</h4>
+
+                            <table class="table table-striped">
+                                <tr>
+                                    <td class="bold">contact email</td>
+                                            <td>{{owner_data['email']}}</td>
+                                </tr>
+
+                                {% for k,v in website.iteritems() %}
+
+                                    {% if k in show_fields %}
+
+                                        <tr>
+                                            <td class="bold">{{ k }}</td>
+
+                                                {% if k == "status" %}
+
+                                                    <td>({{ v }}) {{ status_strings[v] }} <button data-websiteid="{{ website['id'] }}" class="admin_reset_setup btn btn-xs btn-warning">Reset to step 0</button></td>
+
+                                                {% elif k == "under_attack" %}
+
+                                                    {% if v == 0 %}
+                                                        <td>This site is not under attack.</td>
+                                                    {% endif %}
+
+                                                    {% if v == 1 %}
+                                                        <td>Additional protection requested. <a href="/manage/{{ website.id }}/attack?status=2"><button data-websiteid="{{ website['id'] }}" class="site_now_protected btn btn-xs btn-success">Confirm additional protection.</button></a> <a href="/manage/{{ website.id }}/attack?status=0"><button data-websiteid="{{ website['id'] }}" class="site_reset_attack btn btn-xs btn-warning">Reset</button></a></td>
+                                                    {% endif %}
+
+                                                    {% if v == 2 %}
+                                                        <td style="color: green;">This site has additional protection. <a href="/manage/{{ website.id }}/attack?status=0"><button data-websiteid="{{ website['id'] }}" class="site_reset_attack btn btn-xs btn-warning">Reset</button></a></td>
+                                                    {% endif %}
+
+
+                                                {% else %}
+
+                                                    <td>
+                                                        {{ v }}
+                                                    </td>
+
+                                                {% endif %}
+
+                                        </tr>
+
+                                    {% endif %}
+
+                                {% endfor %}
+
+                            </table>
+
+
+                            <div class="table_zone_records">
+                                <h4>Zone file records <a href="javascript:zone_file_edit();">(edit)</a></h4>
+
+                                <table class="table table-striped">
+
+                                    {% if records %}
+
+                                        <tr>
+                                            {% for k,v in records[0].iteritems() %}
+                                                <th>{{ k }}</th>
+                                            {% endfor %}
+                                        </tr>
+
+                                        {% for record in records %}
+
+                                            <tr>
+                                                {% for k,v in record.iteritems() %}
+                                                    <td>{{ v }}</td>
+                                                {% endfor %}
+                                            </tr>
+
+                                        {% endfor %}
+
+                                    {% else %}
+
+                                        No records for this website.
+
+                                    {% endif %}
+
+                                </table>
+                            </div>
+
+                            <div class="edit_zone_records">
+                                <h4>Zone file records <a href="javascript:cancel_edit_zone_file();">(view)</a></h4>
+                                <form action="{{website['id']}}/save_records" method="post">
+                                    <table class="table table-striped">
+
+                                        {% if records %}
+
+                                            <tr>
+                                                {% for k,v in records[0].iteritems() %}
+                                                    <th>{{ k }}</th>
+                                                {% endfor %}
+                                            </tr>
+
+                                            {% for record in records %}
+
+                                                <tr>
+                                                    {% for k,v in record.iteritems() %}
+                                                        {% if k != 'id' and k!= 'website_id' %}
+                                                            <td><input name="{{ k }}_{{ record['id'] }}" class="form-control" value="{{ v if v != None else '' }}"></td>
+                                                        {% else %}
+                                                            <td>{{ v }}</td>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </tr>
+
+                                            {% endfor %}
+
+                                        {% else %}
+
+                                            No records for this website.
+
+                                        {% endif %}
+
+                                    </table>
+                                    <button type="submit" class="btn btn-success">Save records</button>
+                                    <button type="button" onclick="javascript: cancel_edit_zone_file()" class="btn btn-warning">Cancel</button>
+                                </form>
+                            </div>
+
+                            {% if website["status"] == -1 %}
+
+                                {% include "include/edit_ns.html" %}
+
+                                {% include "include/scan_confirm_ns.html" %}
+
+                            {% endif %}
+
+                        </div>
+
+                    <div class="website_delete_admin_section">
+                        <button data-websiteid="{{ website['id'] }}" class="btn btn-danger delete_website_bt">Delete this website</button>
+                    </div>
+                    {% endif %}
+
+                {% endblock %}
+            </div>
+
+        </div>
+
+        <div class="top"></div>
+
+{% endblock %}

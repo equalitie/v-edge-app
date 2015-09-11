@@ -1,0 +1,31 @@
+{% extends "dashboard.html" %}
+
+    {% block content_header %}
+
+            <h2 class="website_url_title">
+                {{ _("DNS zone file") }}
+            </h2>
+
+    {% endblock %}
+
+    {% block website_section %}
+
+            {% if not fetching %}
+            <h3 class="confirmation_title">{{ _("Please review and correct the DNS zone file records below.") }}</h3>
+            {% endif %}
+            {% include "setup/include/dns_records_edit.html" %}
+
+            {% if not fetching %}
+            <button class="btn btn-success confirm_records" onclick="window.location=1.5">{{ _("Save, my records are OK") }}.</button>
+            <button type="submit" class="btn btn-info rescan_records step1-bt">{{ _("I want to rescan my records") }}</button>
+
+            <div class="rescan_warning_box">
+                <h4>Warning! This will wipe out all current records and replace them. You cannot undo this operation.</h4>
+                <button type="button" onclick="document.location='/dashboard/{{ hash_id }}/rescan'" class="btn btn-danger step1-bt">{{ _("I understand, rescan my records.") }}</button>
+            </div>
+
+            {% endif %}
+
+        {% include "setup/include/help_footer.html" %}
+
+    {% endblock %}

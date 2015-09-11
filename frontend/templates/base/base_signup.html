@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+    {% block head %}
+        <head>
+            <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" />
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+            <script src="{{ url_for('static', filename='js/jquery1.1.1.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+            <title>{% block title %}{% endblock %} - Deflect</title>
+        </head>
+    {% endblock %}
+
+    {% block body %}
+
+    <body>
+
+        {% block header %}
+
+            <header>
+
+                <div class="left">
+                        <a href="/lang/en" class="languageLink">english</a>
+                        <a href="/lang/fr" class="languageLink">français</a>
+                        <a href="/lang/es" class="languageLink">español</a>
+                        <a href="/lang/fa" class="languageLink">فارسی</a>
+                        <a href="/lang/ru" class="languageLink">русский</a>
+                        <a href="/lang/ma" class="languageLink">magyar</a>
+                </div>
+
+                <div class="right">
+                    {{ _('a project by') }} <a href="http://equalit.ie" target="_blank">eQualit.ie</a>
+                </div>
+
+            </header>
+
+        {% endblock %}
+
+        <div id="content">
+            <div id="signup_container">
+
+                <div id="left_side">
+                    <a href="//deflect.ca">
+                        <div class="deflect_img"></div>
+                    </a>
+
+                    <div class="blue_box">
+                        <p>{{ _("Help protected everyone around you. Distributed Deflect is a free service for independent media, human rights organisations and activists.") }}</p>
+                        <p>{{ _("Once you sign up, we will set things up on our end and get in touch to guide you through the necessary steps.") }}</p>
+                    </div>
+                </div>
+
+                    {% block content %}
+
+                    {% endblock %}
+
+                </div>
+        </div>
+
+        <footer>
+            <div class="left">
+                <img src="/static/images/equalitie.png" alt="eQualite">
+            </div>
+
+            <div class="right">
+                <p>
+                    <a href="http://equalit.ie">eQualit.ie</a> {{ _("develops open and reusable systems with a focus on privacy, online security, and information management. Our goal is to create accessible technology and improve the skill-set needed for defending human rights and freedoms in the digital age") }}
+                </p>
+            </div>
+        </footer>
+
+    </body>
+
+    {% endblock %}
+
+</html>
